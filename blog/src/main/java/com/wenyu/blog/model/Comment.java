@@ -1,14 +1,16 @@
 package com.wenyu.blog.model;
 
 
-import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
+import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-
+@Entity
 public class Comment {
+
+    @Id
+    @GeneratedValue
     private Long id;
 
     private Boolean adminComment;

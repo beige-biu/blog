@@ -1,4 +1,4 @@
-package com.wenyu.blog.controller;
+package com.wenyu.blog.web;
 
 
 import org.springframework.stereotype.Controller;
@@ -15,6 +15,6 @@ public class IndexController {
     @RequestMapping("/")
     public String index(){
 
-        return"index";
+        return "index";
     }
 }
