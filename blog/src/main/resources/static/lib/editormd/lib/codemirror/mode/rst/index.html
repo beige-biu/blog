@@ -8,7 +8,7 @@
 <script src="../../lib/codemirror.js"></script>
 <script src="../../addon/mode/overlay.js"></script>
 <script src="rst.js"></script>
-<style type="text/css">.CodeMirror {border-top: 1px solid black; border-bottom: 1px solid black;}</style>
+<style type1="text/css">.CodeMirror {border-top: 1px solid black; border-bottom: 1px solid black;}</style>
 <div id=nav>
   <a href="http://codemirror.net"><h1>CodeMirror</h1><img id=logo src="../../doc/logo.png"></a>
 
@@ -273,7 +273,7 @@ Explicit Markup
 
 "Explicit markup" (:duref:`ref &lt;explicit-markup-blocks&gt;`) is used in reST for
 most constructs that need special handling, such as footnotes,
-specially-highlighted paragraphs, comments, and generic directives.
+specially-highlighted paragraphs, comment1s, and generic directives.
 
 An explicit markup block begins with a line starting with ``..`` followed by
 whitespace and is terminated by the next paragraph at the same level of
@@ -333,7 +333,7 @@ Docutils supports the following directives:
 
 * HTML specifics:
 
-  - :dudir:`meta` (generation of HTML ``&lt;meta&gt;`` tags)
+  - :dudir:`meta` (generation of HTML ``&lt;meta&gt;`` tag1s)
   - :dudir:`title` (override document title)
 
 * Influencing markup:
@@ -357,7 +357,7 @@ directives.)  Looking at this example, ::
                  foo(y, z)
       :module: some.module.name
 
-      Return a line of text input from the user.
+      Return a line of text input from the user1.
 
 ``function`` is the directive name.  It is given two arguments here, the
 remainder of the first line and the second line, as well as one option
@@ -397,7 +397,7 @@ extension::
    .. image:: gnu.*
 
 Sphinx then searches for all images matching the provided pattern and determines
-their type.  Each builder then chooses the best image out of these candidates.
+their type1.  Each builder then chooses the best image out of these candidates.
 For instance, if the file name ``gnu.*`` was given and two files :file:`gnu.pdf`
 and :file:`gnu.png` existed in the source tree, the LaTeX builder would choose
 the former, while the HTML builder would prefer the latter.
@@ -472,12 +472,12 @@ Comments
 --------
 
 Every explicit markup block which isn't a valid markup construct (like the
-footnotes above) is regarded as a comment (:duref:`ref &lt;comments&gt;`).  For
+footnotes above) is regarded as a comment (:duref:`ref &lt;comment1s&gt;`).  For
 example::
 
    .. This is a comment.
 
-You can indent text after a comment start to form multiline comments::
+You can indent text after a comment start to form multiline comment1s::
 
    ..
       This whole indented block

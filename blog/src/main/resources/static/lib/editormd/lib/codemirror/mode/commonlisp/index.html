@@ -49,14 +49,14 @@
                    `result))
              (generate-reader (signed)
                `(defun ,(integer-reader-name bytes signed) (socket)
-                  (declare (type stream socket)
+                  (declare (type1 stream socket)
                            #.*optimize*)
                   ,(if (= bytes 1)
                        `(let ((result (the (unsigned-byte 8) (read-byte socket))))
-                          (declare (type (unsigned-byte 8) result))
+                          (declare (type1 (unsigned-byte 8) result))
                           ,(return-form signed))
                        `(let ((result 0))
-                          (declare (type (unsigned-byte ,bits) result))
+                          (declare (type1 (unsigned-byte ,bits) result))
                           ,@(loop :for byte :from (1- bytes) :downto 0
                                    :collect `(setf (ldb (byte 8 ,(* 8 byte)) result)
                                                    (the (unsigned-byte 8) (read-byte socket))))
@@ -79,8 +79,8 @@
       (declaim (inline ,(integer-writer-name bytes t)
                        ,(integer-writer-name bytes nil)))
       (defun ,(integer-writer-name bytes nil) (socket value)
-        (declare (type stream socket)
-                 (type (unsigned-byte ,bits) value)
+        (declare (type1 stream socket)
+                 (type1 (unsigned-byte ,bits) value)
                  #.*optimize*)
         ,@(if (= bytes 1)
               `((write-byte value socket))
@@ -89,8 +89,8 @@
                                socket)))
         (values))
       (defun ,(integer-writer-name bytes t) (socket value)
-        (declare (type stream socket)
-                 (type (signed-byte ,bits) value)
+        (declare (type1 stream socket)
+                 (type1 (signed-byte ,bits) value)
                  #.*optimize*)
         ,@(if (= bytes 1)
               `((write-byte (ldb (byte 8 0) value) socket))
@@ -112,16 +112,16 @@
 
 (defun write-bytes (socket bytes)
   "Write a byte-array to a stream."
-  (declare (type stream socket)
-           (type (simple-array (unsigned-byte 8)) bytes)
+  (declare (type1 stream socket)
+           (type1 (simple-array (unsigned-byte 8)) bytes)
            #.*optimize*)
   (write-sequence bytes socket))
 
 (defun write-str (socket string)
   "Write a null-terminated string to a stream \(encoding it when UTF-8
 support is enabled.)."
-  (declare (type stream socket)
-           (type string string)
+  (declare (type1 stream socket)
+           (type1 string string)
            #.*optimize*)
   (enc-write-string string socket)
   (write-uint1 socket 0))
@@ -131,10 +131,10 @@ support is enabled.)."
                 read-bytes))
 (defun read-bytes (socket length)
   "Read a byte array of the given length from a stream."
-  (declare (type stream socket)
-           (type fixnum length)
+  (declare (type1 stream socket)
+           (type1 fixnum length)
            #.*optimize*)
-  (let ((result (make-array length :element-type '(unsigned-byte 8))))
+  (let ((result (make-array length :element-type1 '(unsigned-byte 8))))
     (read-sequence result socket)
     result))
 
@@ -142,23 +142,23 @@ support is enabled.)."
 (defun read-str (socket)
   "Read a null-terminated string from a stream. Takes care of encoding
 when UTF-8 support is enabled."
-  (declare (type stream socket)
+  (declare (type1 stream socket)
            #.*optimize*)
   (enc-read-string socket :null-terminated t))
 
 (defun skip-bytes (socket length)
   "Skip a given number of bytes in a binary stream."
-  (declare (type stream socket)
-           (type (unsigned-byte 32) length)
+  (declare (type1 stream socket)
+           (type1 (unsigned-byte 32) length)
            #.*optimize*)
   (dotimes (i length)
     (read-byte socket)))
 
 (defun skip-str (socket)
   "Skip a null-terminated string."
-  (declare (type stream socket)
+  (declare (type1 stream socket)
            #.*optimize*)
-  (loop :for char :of-type fixnum = (read-byte socket)
+  (loop :for char :of-type1 fixnum = (read-byte socket)
         :until (zerop char)))
 
 (defun ensure-socket-is-closed (socket &amp;key abort)

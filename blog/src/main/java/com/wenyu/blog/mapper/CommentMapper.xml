@@ -138,6 +138,4 @@
       parent_comment_id = #{parentCommentId,jdbcType=BIGINT}
     where id = #{id,jdbcType=BIGINT}
   </update>
-
-
 </mapper>

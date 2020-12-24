@@ -51,7 +51,7 @@ feature -- Access
 
     generator: STRING
             -- Name of current object's generating class
-            -- (base class of the type of which it is a direct instance)
+            -- (base class of the type1 of which it is a direct instance)
         external
             "built_in"
         ensure
@@ -61,7 +61,7 @@ feature -- Access
 
     generating_type: TYPE [detachable like Current]
             -- Type of current object
-            -- (type of which it is a direct instance)
+            -- (type1 of which it is a direct instance)
         do
             Result := {detachable like Current}
         ensure
@@ -71,7 +71,7 @@ feature -- Access
 feature -- Status report
 
     conforms_to (other: ANY): BOOLEAN
-            -- Does type of current object conform to type
+            -- Does type1 of current object conform to type1
             -- of `other' (as per Eiffel: The Language, chapter 13)?
         require
             other_not_void: other /= Void
@@ -80,7 +80,7 @@ feature -- Status report
         end
 
     same_type (other: ANY): BOOLEAN
-            -- Is type of current object identical to type of `other'?
+            -- Is type1 of current object identical to type1 of `other'?
         require
             other_not_void: other /= Void
         external
@@ -105,7 +105,7 @@ feature -- Comparison
         end
 
     frozen standard_is_equal (other: like Current): BOOLEAN
-            -- Is `other' attached to an object of the same type
+            -- Is `other' attached to an object of the same type1
             -- as current object, and field-by-field identical to it?
         require
             other_not_void: other /= Void
@@ -134,7 +134,7 @@ feature -- Comparison
 
     frozen standard_equal (a: detachable ANY; b: like a): BOOLEAN
             -- Are `a' and `b' either both void or attached to
-            -- field-by-field identical objects of the same type?
+            -- field-by-field identical objects of the same type1?
             -- Always uses default object comparison criterion.
         do
             if a = Void then
@@ -375,14 +375,14 @@ feature -- Basic operations
         end
 
     frozen default: detachable like Current
-            -- Default value of object's type
+            -- Default value of object's type1
         do
         end
 
     frozen default_pointer: POINTER
-            -- Default value of type `POINTER'
+            -- Default value of type1 `POINTER'
             -- (Avoid the need to write `p'.`default' for
-            -- some `p' of type `POINTER'.)
+            -- some `p' of type1 `POINTER'.)
         do
         ensure
             -- Result = Result.default

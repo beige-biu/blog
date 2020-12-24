@@ -1,22 +1,14 @@
 package com.wenyu.blog.model;
 
-import javax.persistence.*;
-import java.util.ArrayList;
 import java.util.Date;
-import java.util.List;
 
-@Entity
-@Table(name = "t_blog")
 public class Blog {
-    @Id
-    @GeneratedValue
     private Long id;
 
     private Boolean appreciation;
 
     private Boolean commentabled;
 
-    @Temporal(TemporalType.TIMESTAMP)
     private Date createTime;
 
     private String description;
@@ -42,51 +34,6 @@ public class Blog {
     private Long userId;
 
     private String content;
-
-    @ManyToOne
-    private Type type;
-
-    @ManyToMany(cascade = {CascadeType.PERSIST}) //新增一个blog时也在tag新增一个
-    private List<Tag> tags = new ArrayList<>();
-
-    @ManyToOne
-    private User user;
-
-    @OneToMany(mappedBy = "blog")
-    private List<Comment> comments = new ArrayList<>();
-
-
-    public List<Tag> getTags() {
-        return tags;
-    }
-
-    public void setTags(List<Tag> tags) {
-        this.tags = tags;
-    }
-
-    public Type getType() {
-        return type;
-    }
-
-    public List<Comment> getComments() {
-        return comments;
-    }
-
-    public void setComments(List<Comment> comments) {
-        this.comments = comments;
-    }
-
-    public void setType(Type type) {
-        this.type = type;
-    }
-
-    public User getUser() {
-        return user;
-    }
-
-    public void setUser(User user) {
-        this.user = user;
-    }
 
     public Long getId() {
         return id;
@@ -214,27 +161,5 @@ public class Blog {
 
     public void setContent(String content) {
         this.content = content;
-    }
-
-    @Override
-    public String toString() {
-        return "Blog{" +
-                "id=" + id +
-                ", appreciation=" + appreciation +
-                ", commentabled=" + commentabled +
-                ", createTime=" + createTime +
-                ", description='" + description + '\'' +
-                ", firstPicture='" + firstPicture + '\'' +
-                ", flag='" + flag + '\'' +
-                ", published=" + published +
-                ", recommend=" + recommend +
-                ", shareStatement=" + shareStatement +
-                ", title='" + title + '\'' +
-                ", updateTime=" + updateTime +
-                ", views=" + views +
-                ", typeId=" + typeId +
-                ", userId=" + userId +
-                ", content='" + content + '\'' +
-                '}';
     }
 }

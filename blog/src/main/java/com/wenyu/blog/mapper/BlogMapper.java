@@ -2,6 +2,7 @@ package com.wenyu.blog.mapper;
 
 import com.wenyu.blog.model.Blog;
 import org.apache.ibatis.annotations.Mapper;
+
 @Mapper
 public interface BlogMapper {
     int deleteByPrimaryKey(Long id);

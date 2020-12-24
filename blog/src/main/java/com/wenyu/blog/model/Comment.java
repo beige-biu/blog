@@ -1,16 +1,8 @@
 package com.wenyu.blog.model;
 
-
-import javax.persistence.*;
-import java.util.ArrayList;
 import java.util.Date;
-import java.util.List;
 
-@Entity
 public class Comment {
-
-    @Id
-    @GeneratedValue
     private Long id;
 
     private Boolean adminComment;
@@ -29,30 +21,12 @@ public class Comment {
 
     private Long parentCommentId;
 
-    @ManyToOne
-    private Blog blog;
-
-    @OneToMany(mappedBy = "parentComment")
-    private List<Comment> replyComments = new ArrayList<>();
-
-    @ManyToOne
-    private Comment parentComment;
-
-
     public Long getId() {
         return id;
     }
 
     public void setId(Long id) {
         this.id = id;
-    }
-
-    public Blog getBlog() {
-        return blog;
-    }
-
-    public void setBlog(Blog blog) {
-        this.blog = blog;
     }
 
     public Boolean getAdminComment() {
@@ -117,21 +91,5 @@ public class Comment {
 
     public void setParentCommentId(Long parentCommentId) {
         this.parentCommentId = parentCommentId;
-    }
-
-    public List<Comment> getReplyComments() {
-        return replyComments;
-    }
-
-    public void setReplyComments(List<Comment> replyComments) {
-        this.replyComments = replyComments;
-    }
-
-    public Comment getParentComment() {
-        return parentComment;
-    }
-
-    public void setParentComment(Comment parentComment) {
-        this.parentComment = parentComment;
     }
 }
