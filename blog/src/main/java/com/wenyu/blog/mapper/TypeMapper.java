@@ -16,4 +16,8 @@ public interface TypeMapper {
     int updateByPrimaryKeySelective(Type record);
 
     int updateByPrimaryKey(Type record);
+
+    Type saveType(Type type);
+
+    Type selectById(long id);
 }

@@ -14,6 +14,12 @@
     from t_type
     where id = #{id,jdbcType=BIGINT}
   </select>
+  <select id="selectById" parameterType="java.lang.Long" resultMap="BaseResultMap">
+    select
+    *
+    from t_type
+    where id = #{id}
+  </select>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
     delete from t_type
     where id = #{id,jdbcType=BIGINT}
@@ -41,6 +47,26 @@
       </if>
     </trim>
   </insert>
+  <insert id="saveType" parameterType="com.wenyu.blog.model.Type">
+    insert into t_type
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="name != null">
+        name,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=BIGINT},
+      </if>
+      <if test="name != null">
+        #{name,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+
   <update id="updateByPrimaryKeySelective" parameterType="com.wenyu.blog.model.Type">
     update t_type
     <set>
