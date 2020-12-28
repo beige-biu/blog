@@ -34,7 +34,8 @@ public class TypeServiceImpl implements TypeService {
 
     @Override
     public Page<Type> listType(Pageable pageable) {
-        return typeMapper.findAll;
+        //return typeMapper.findAll;
+        return  null;
     }
 
     @Override
