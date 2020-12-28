@@ -1,6 +1,10 @@
 package com.wenyu.blog.model;
 
+import javax.persistence.Entity;
+
+@Entity
 public class Type {
+
     private Long id;
 
     private String name;

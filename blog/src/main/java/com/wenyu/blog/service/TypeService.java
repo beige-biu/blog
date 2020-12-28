@@ -4,6 +4,8 @@ import com.wenyu.blog.model.Type;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 
+import java.util.Optional;
+
 /**
  * Author:wenyu
  * 2020/12/26
@@ -12,7 +14,7 @@ public interface TypeService {
 
     Type saveType(Type type);
 
-    Type getType(long id);
+    Optional<Type> getType(Long id);
 
     Page<Type> listType(Pageable pageable);
 
