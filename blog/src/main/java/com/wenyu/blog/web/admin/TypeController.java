@@ -3,15 +3,20 @@ package com.wenyu.blog.web.admin;
 
 import com.wenyu.blog.model.Type;
 import com.wenyu.blog.service.TypeService;
+import org.springframework.boot.context.properties.bind.BindResult;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.data.web.PageableDefault;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import javax.annotation.Resource;
+import javax.validation.Valid;
 
 /**
  * Author:wenyu
@@ -25,17 +30,34 @@ public class TypeController {
     private TypeService typeService;
 
     @GetMapping("/types")
-    public String type(@PageableDefault(size = 10,sort = {"id"},direction = Sort.Direction.DESC)
+    public String type(@PageableDefault(size = 3,sort = {"id"},direction = Sort.Direction.ASC)
                                Pageable pageable,Model model){
         model.addAttribute("page",typeService.listType(pageable));
         return "admin/types";
     }
 
     @RequestMapping("/types/input")
-    public String input(Model model){
+    public String addType(Model model){
         model.addAttribute("type", new Type());
         return "admin/type-input";
     }
 
+    @PostMapping("types")
+    //@Valid 需要校验的类
+    public String input(@Valid Type type, BindingResult result, RedirectAttributes attributes){
+        if(result.hasErrors()){
+            return "admin/type-input";
+        }
+
+       Type t = typeService.saveType(type);
+       if( t== null){
+           //表示添加失败
+           attributes.addFlashAttribute("message", "操作失败");
+       }else {
+           //表示添加成功
+           attributes.addFlashAttribute("message", "操作成功");
+       }
+        return "redirect:/admin/types";
+    }
 
 }
