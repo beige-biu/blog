@@ -65,4 +65,9 @@ public class TypeServiceImpl implements TypeService {
     public void deleteType(Long id) {
         typeMapper.deleteByPrimaryKey(id);
     }
+
+    @Override
+    public Type selectByName(String name) {
+        return typeMapper.selectByName(name);
+    }
 }

@@ -1,122 +1,294 @@
-2020-12-28 14:08:06.152  INFO 9072 --- [restartedMain] com.wenyu.blog.BlogApplication           : Starting BlogApplication on lt41137t480 with PID 9072 (E:\blog\blog\target\classes started by Administrator in E:\blog\blog)
-2020-12-28 14:08:06.159 DEBUG 9072 --- [restartedMain] com.wenyu.blog.BlogApplication           : Running with Spring Boot v2.3.5.RELEASE, Spring v5.2.10.RELEASE
-2020-12-28 14:08:06.159  INFO 9072 --- [restartedMain] com.wenyu.blog.BlogApplication           : No active profile set, falling back to default profiles: default
-2020-12-28 14:08:06.218  INFO 9072 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2020-12-28 14:08:06.219  INFO 9072 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2020-12-28 14:08:07.109  INFO 9072 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
-2020-12-28 14:08:07.132  INFO 9072 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 12ms. Found 0 JPA repository interfaces.
-2020-12-28 14:08:07.890  INFO 9072 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2020-12-28 14:08:07.903  INFO 9072 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2020-12-28 14:08:07.903  INFO 9072 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.39]
-2020-12-28 14:08:08.002  INFO 9072 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2020-12-28 14:08:08.002  INFO 9072 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1783 ms
-2020-12-28 14:08:08.194  INFO 9072 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2020-12-28 14:08:08.243  INFO 9072 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2020-12-28 14:08:08.310  INFO 9072 --- [task-1] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.22.Final
-2020-12-28 14:08:08.597  INFO 9072 --- [task-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
-2020-12-28 14:08:08.741  INFO 9072 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2020-12-28 14:08:08.769  WARN 9072 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2020-12-28 14:08:09.024  INFO 9072 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2020-12-28 14:08:09.030  INFO 9072 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
-2020-12-28 14:08:09.054  INFO 9072 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
-2020-12-28 14:08:09.121  WARN 9072 --- [restartedMain] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][restartedMain] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
-2020-12-28 14:08:09.377  INFO 9072 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2020-12-28 14:08:09.388  INFO 9072 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2020-12-28 14:08:09.424  INFO 9072 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2020-12-28 14:08:09.517  INFO 9072 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2020-12-28 14:08:09.519  INFO 9072 --- [restartedMain] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
-2020-12-28 14:08:09.519  INFO 9072 --- [restartedMain] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
-2020-12-28 14:08:09.530  INFO 9072 --- [restartedMain] com.wenyu.blog.BlogApplication           : Started BlogApplication in 4.13 seconds (JVM running for 5.63)
-2020-12-28 14:08:18.810  INFO 9072 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2020-12-28 14:08:18.811  INFO 9072 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2020-12-28 14:08:18.830  INFO 9072 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 19 ms
-2020-12-28 14:08:25.300 DEBUG 9072 --- [http-nio-8080-exec-4] c.w.b.m.U.findByUsernameAndPassword      : ==>  Preparing: select * from t_user where username = ? and password = ?
-2020-12-28 14:08:25.315 DEBUG 9072 --- [http-nio-8080-exec-4] c.w.b.m.U.findByUsernameAndPassword      : ==> Parameters: admin(String), 96e79218965eb72c92a549dd5a330112(String)
-2020-12-28 14:08:25.330 DEBUG 9072 --- [http-nio-8080-exec-4] c.w.b.m.U.findByUsernameAndPassword      : <==      Total: 1
-2020-12-28 14:08:59.324 DEBUG 9072 --- [http-nio-8080-exec-2] c.w.b.m.U.findByUsernameAndPassword      : ==>  Preparing: select * from t_user where username = ? and password = ?
-2020-12-28 14:08:59.324 DEBUG 9072 --- [http-nio-8080-exec-2] c.w.b.m.U.findByUsernameAndPassword      : ==> Parameters: admin(String), 96e79218965eb72c92a549dd5a330112(String)
-2020-12-28 14:08:59.325 DEBUG 9072 --- [http-nio-8080-exec-2] c.w.b.m.U.findByUsernameAndPassword      : <==      Total: 1
-2020-12-28 14:09:21.693  INFO 9072 --- [Thread-14] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2020-12-28 14:09:21.695  INFO 9072 --- [Thread-14] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
-2020-12-28 14:09:21.701  INFO 9072 --- [Thread-14] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2020-12-28 14:09:21.707  INFO 9072 --- [Thread-14] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2020-12-28 14:09:22.096  INFO 9072 --- [restartedMain] com.wenyu.blog.BlogApplication           : Starting BlogApplication on lt41137t480 with PID 9072 (E:\blog\blog\target\classes started by Administrator in E:\blog\blog)
-2020-12-28 14:09:22.096 DEBUG 9072 --- [restartedMain] com.wenyu.blog.BlogApplication           : Running with Spring Boot v2.3.5.RELEASE, Spring v5.2.10.RELEASE
-2020-12-28 14:09:22.096  INFO 9072 --- [restartedMain] com.wenyu.blog.BlogApplication           : No active profile set, falling back to default profiles: default
-2020-12-28 14:09:22.596  INFO 9072 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
-2020-12-28 14:09:22.607  INFO 9072 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 8ms. Found 0 JPA repository interfaces.
-2020-12-28 14:09:22.870  INFO 9072 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2020-12-28 14:09:22.871  INFO 9072 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2020-12-28 14:09:22.871  INFO 9072 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.39]
-2020-12-28 14:09:22.896  INFO 9072 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2020-12-28 14:09:22.896  INFO 9072 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 796 ms
-2020-12-28 14:09:22.953  INFO 9072 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2020-12-28 14:09:22.959  INFO 9072 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2020-12-28 14:09:22.966  INFO 9072 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
-2020-12-28 14:09:22.971  INFO 9072 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
-2020-12-28 14:09:22.971  INFO 9072 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
-2020-12-28 14:09:22.996  INFO 9072 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2020-12-28 14:09:22.996  INFO 9072 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2020-12-28 14:09:23.048  INFO 9072 --- [task-2] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2020-12-28 14:09:23.063  WARN 9072 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2020-12-28 14:09:23.226  INFO 9072 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
-2020-12-28 14:09:23.292  WARN 9072 --- [restartedMain] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][restartedMain] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
-2020-12-28 14:09:23.476  INFO 9072 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2020-12-28 14:09:23.477  INFO 9072 --- [restartedMain] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
-2020-12-28 14:09:23.478  INFO 9072 --- [restartedMain] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
-2020-12-28 14:09:23.485  INFO 9072 --- [restartedMain] com.wenyu.blog.BlogApplication           : Started BlogApplication in 1.478 seconds (JVM running for 79.576)
-2020-12-28 14:09:23.488  INFO 9072 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
-2020-12-28 14:09:42.022  INFO 9072 --- [Thread-21] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2020-12-28 14:09:42.023  INFO 9072 --- [Thread-21] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
-2020-12-28 14:09:42.023  INFO 9072 --- [Thread-21] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
-2020-12-28 14:09:42.027  INFO 9072 --- [Thread-21] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
-2020-12-28 14:09:42.298  INFO 9072 --- [restartedMain] com.wenyu.blog.BlogApplication           : Starting BlogApplication on lt41137t480 with PID 9072 (E:\blog\blog\target\classes started by Administrator in E:\blog\blog)
-2020-12-28 14:09:42.298 DEBUG 9072 --- [restartedMain] com.wenyu.blog.BlogApplication           : Running with Spring Boot v2.3.5.RELEASE, Spring v5.2.10.RELEASE
-2020-12-28 14:09:42.298  INFO 9072 --- [restartedMain] com.wenyu.blog.BlogApplication           : No active profile set, falling back to default profiles: default
-2020-12-28 14:09:42.611  INFO 9072 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
-2020-12-28 14:09:42.618  INFO 9072 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 5ms. Found 0 JPA repository interfaces.
-2020-12-28 14:09:42.754  INFO 9072 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2020-12-28 14:09:42.755  INFO 9072 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2020-12-28 14:09:42.755  INFO 9072 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.39]
-2020-12-28 14:09:42.776  INFO 9072 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2020-12-28 14:09:42.776  INFO 9072 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 475 ms
-2020-12-28 14:09:42.836  INFO 9072 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2020-12-28 14:09:42.843  INFO 9072 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2020-12-28 14:09:42.849  INFO 9072 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
-2020-12-28 14:09:42.854  INFO 9072 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
-2020-12-28 14:09:42.854  INFO 9072 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
-2020-12-28 14:09:42.881  INFO 9072 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2020-12-28 14:09:42.882  INFO 9072 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2020-12-28 14:09:42.892  INFO 9072 --- [task-2] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2020-12-28 14:09:42.905  WARN 9072 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2020-12-28 14:09:42.973  INFO 9072 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
-2020-12-28 14:09:42.998  WARN 9072 --- [restartedMain] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][restartedMain] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
-2020-12-28 14:09:43.146  INFO 9072 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2020-12-28 14:09:43.147  INFO 9072 --- [restartedMain] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
-2020-12-28 14:09:43.147  INFO 9072 --- [restartedMain] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
-2020-12-28 14:09:43.153  INFO 9072 --- [restartedMain] com.wenyu.blog.BlogApplication           : Started BlogApplication in 0.896 seconds (JVM running for 99.243)
-2020-12-28 14:09:43.156  INFO 9072 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
-2020-12-28 14:09:55.741  INFO 9072 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2020-12-28 14:09:55.741  INFO 9072 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2020-12-28 14:09:55.742  INFO 9072 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2020-12-28 14:10:01.311 DEBUG 9072 --- [http-nio-8080-exec-2] c.w.b.m.U.findByUsernameAndPassword      : ==>  Preparing: select * from t_user where username = ? and password = ?
-2020-12-28 14:10:01.311 DEBUG 9072 --- [http-nio-8080-exec-2] c.w.b.m.U.findByUsernameAndPassword      : ==> Parameters: admin(String), 96e79218965eb72c92a549dd5a330112(String)
-2020-12-28 14:10:01.312 DEBUG 9072 --- [http-nio-8080-exec-2] c.w.b.m.U.findByUsernameAndPassword      : <==      Total: 1
-2020-12-28 14:12:20.251 ERROR 9072 --- [http-nio-8080-exec-7] c.w.b.h.ControllerExceptionHandler       : Requst URL : http://localhost:8080/admin/login，Exception : {}
+2020-12-30 10:39:28.755  INFO 6280 --- [restartedMain] com.wenyu.blog.BlogApplication           : Starting BlogApplication on lt41137t480 with PID 6280 (E:\blog\blog\target\classes started by Administrator in E:\blog\blog)
+2020-12-30 10:39:28.761 DEBUG 6280 --- [restartedMain] com.wenyu.blog.BlogApplication           : Running with Spring Boot v2.3.5.RELEASE, Spring v5.2.10.RELEASE
+2020-12-30 10:39:28.761  INFO 6280 --- [restartedMain] com.wenyu.blog.BlogApplication           : No active profile set, falling back to default profiles: default
+2020-12-30 10:39:28.817  INFO 6280 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-12-30 10:39:28.817  INFO 6280 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-12-30 10:39:29.624  INFO 6280 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-12-30 10:39:29.672  INFO 6280 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 40ms. Found 1 JPA repository interfaces.
+2020-12-30 10:39:30.182  INFO 6280 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-12-30 10:39:30.191  INFO 6280 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-12-30 10:39:30.191  INFO 6280 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.39]
+2020-12-30 10:39:30.272  INFO 6280 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-12-30 10:39:30.272  INFO 6280 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1454 ms
+2020-12-30 10:39:30.376  INFO 6280 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-12-30 10:39:30.506  INFO 6280 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-12-30 10:39:30.567  INFO 6280 --- [task-1] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.22.Final
+2020-12-30 10:39:30.758  INFO 6280 --- [task-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-12-30 10:39:30.847  WARN 6280 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-12-30 10:39:30.883  INFO 6280 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-12-30 10:39:31.033  INFO 6280 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-12-30 10:39:31.058  INFO 6280 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-12-30 10:39:31.087  INFO 6280 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2020-12-30 10:39:31.102  WARN 6280 --- [restartedMain] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][restartedMain] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+2020-12-30 10:39:31.212  INFO 6280 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-12-30 10:39:31.294  INFO 6280 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-12-30 10:39:31.296  INFO 6280 --- [restartedMain] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+2020-12-30 10:39:31.927  INFO 6280 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-12-30 10:39:31.936  INFO 6280 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-12-30 10:39:32.446  INFO 6280 --- [restartedMain] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2020-12-30 10:39:32.454  INFO 6280 --- [restartedMain] com.wenyu.blog.BlogApplication           : Started BlogApplication in 4.235 seconds (JVM running for 5.129)
+2020-12-30 10:39:41.036  INFO 6280 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-12-30 10:39:41.037  INFO 6280 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-12-30 10:39:41.042  INFO 6280 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms
+2020-12-30 10:39:46.477 DEBUG 6280 --- [http-nio-8080-exec-4] c.w.b.m.U.findByUsernameAndPassword      : ==>  Preparing: select * from t_user where username = ? and password = ?
+2020-12-30 10:39:46.493 DEBUG 6280 --- [http-nio-8080-exec-4] c.w.b.m.U.findByUsernameAndPassword      : ==> Parameters: admin(String), 96e79218965eb72c92a549dd5a330112(String)
+2020-12-30 10:39:46.500 DEBUG 6280 --- [http-nio-8080-exec-4] c.w.b.m.U.findByUsernameAndPassword      : <==      Total: 1
+2020-12-30 13:01:13.406 DEBUG 6280 --- [http-nio-8080-exec-1] c.w.b.m.U.findByUsernameAndPassword      : ==>  Preparing: select * from t_user where username = ? and password = ?
+2020-12-30 13:01:13.408 DEBUG 6280 --- [http-nio-8080-exec-1] c.w.b.m.U.findByUsernameAndPassword      : ==> Parameters: admin(String), 96e79218965eb72c92a549dd5a330112(String)
+2020-12-30 13:01:13.412 DEBUG 6280 --- [http-nio-8080-exec-1] c.w.b.m.U.findByUsernameAndPassword      : <==      Total: 1
+2020-12-30 13:03:26.166  INFO 9504 --- [restartedMain] com.wenyu.blog.BlogApplication           : Starting BlogApplication on lt41137t480 with PID 9504 (E:\blog\blog\target\classes started by Administrator in E:\blog\blog)
+2020-12-30 13:03:26.169 DEBUG 9504 --- [restartedMain] com.wenyu.blog.BlogApplication           : Running with Spring Boot v2.3.5.RELEASE, Spring v5.2.10.RELEASE
+2020-12-30 13:03:26.172  INFO 9504 --- [restartedMain] com.wenyu.blog.BlogApplication           : No active profile set, falling back to default profiles: default
+2020-12-30 13:03:26.219  INFO 9504 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-12-30 13:03:26.219  INFO 9504 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-12-30 13:03:26.934  INFO 9504 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-12-30 13:03:26.977  INFO 9504 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 37ms. Found 1 JPA repository interfaces.
+2020-12-30 13:03:27.419  INFO 9504 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-12-30 13:03:27.426  INFO 9504 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-12-30 13:03:27.427  INFO 9504 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.39]
+2020-12-30 13:03:27.507  INFO 9504 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-12-30 13:03:27.507  INFO 9504 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1287 ms
+2020-12-30 13:03:27.626  INFO 9504 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-12-30 13:03:27.772  INFO 9504 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-12-30 13:03:27.817  INFO 9504 --- [task-1] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.22.Final
+2020-12-30 13:03:27.918  INFO 9504 --- [task-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-12-30 13:03:28.002  INFO 9504 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-12-30 13:03:28.009  WARN 9504 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-12-30 13:03:28.169  INFO 9504 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-12-30 13:03:28.173  INFO 9504 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-12-30 13:03:28.191  INFO 9504 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2020-12-30 13:03:28.223  WARN 9504 --- [restartedMain] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][restartedMain] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+2020-12-30 13:03:28.322  INFO 9504 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-12-30 13:03:28.386  INFO 9504 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-12-30 13:03:28.388  INFO 9504 --- [restartedMain] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+2020-12-30 13:03:28.681  INFO 9504 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-12-30 13:03:28.687  INFO 9504 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-12-30 13:03:28.961  INFO 9504 --- [restartedMain] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2020-12-30 13:03:28.968  INFO 9504 --- [restartedMain] com.wenyu.blog.BlogApplication           : Started BlogApplication in 3.173 seconds (JVM running for 3.895)
+2020-12-30 13:03:43.583  INFO 9504 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-12-30 13:03:43.584  INFO 9504 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-12-30 13:03:43.588  INFO 9504 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
+2020-12-30 13:03:49.575 DEBUG 9504 --- [http-nio-8080-exec-7] c.w.b.m.U.findByUsernameAndPassword      : ==>  Preparing: select * from t_user where username = ? and password = ?
+2020-12-30 13:03:49.590 DEBUG 9504 --- [http-nio-8080-exec-7] c.w.b.m.U.findByUsernameAndPassword      : ==> Parameters: admin(String), 96e79218965eb72c92a549dd5a330112(String)
+2020-12-30 13:03:49.597 DEBUG 9504 --- [http-nio-8080-exec-7] c.w.b.m.U.findByUsernameAndPassword      : <==      Total: 1
+2020-12-30 13:09:55.161  INFO 9504 --- [Thread-10] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-12-30 13:09:55.163  INFO 9504 --- [Thread-10] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-12-30 13:09:55.165  INFO 9504 --- [Thread-10] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-12-30 13:09:55.167  INFO 9504 --- [Thread-10] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-12-30 13:09:55.348  INFO 9504 --- [restartedMain] com.wenyu.blog.BlogApplication           : Starting BlogApplication on lt41137t480 with PID 9504 (E:\blog\blog\target\classes started by Administrator in E:\blog\blog)
+2020-12-30 13:09:55.349 DEBUG 9504 --- [restartedMain] com.wenyu.blog.BlogApplication           : Running with Spring Boot v2.3.5.RELEASE, Spring v5.2.10.RELEASE
+2020-12-30 13:09:55.349  INFO 9504 --- [restartedMain] com.wenyu.blog.BlogApplication           : No active profile set, falling back to default profiles: default
+2020-12-30 13:09:55.474  INFO 9504 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-12-30 13:09:55.482  INFO 9504 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 7ms. Found 1 JPA repository interfaces.
+2020-12-30 13:09:55.567  INFO 9504 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-12-30 13:09:55.568  INFO 9504 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-12-30 13:09:55.568  INFO 9504 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.39]
+2020-12-30 13:09:55.576  INFO 9504 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-12-30 13:09:55.576  INFO 9504 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 226 ms
+2020-12-30 13:09:55.614  INFO 9504 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-12-30 13:09:55.621  INFO 9504 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-12-30 13:09:55.626  INFO 9504 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2020-12-30 13:09:55.630  INFO 9504 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2020-12-30 13:09:55.631  INFO 9504 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2020-12-30 13:09:55.663  INFO 9504 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-12-30 13:09:55.663  INFO 9504 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-12-30 13:09:55.674  INFO 9504 --- [task-2] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-12-30 13:09:55.683  WARN 9504 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-12-30 13:09:55.742  INFO 9504 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-12-30 13:09:55.759  WARN 9504 --- [restartedMain] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][restartedMain] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+2020-12-30 13:09:55.841  INFO 9504 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-12-30 13:09:55.842  INFO 9504 --- [restartedMain] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+2020-12-30 13:09:55.878  INFO 9504 --- [restartedMain] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2020-12-30 13:09:55.882  INFO 9504 --- [restartedMain] com.wenyu.blog.BlogApplication           : Started BlogApplication in 0.56 seconds (JVM running for 390.768)
+2020-12-30 13:09:55.883  INFO 9504 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2020-12-30 13:18:49.531  INFO 9504 --- [Thread-18] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-12-30 13:18:49.531  INFO 9504 --- [Thread-18] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-12-30 13:18:49.531  INFO 9504 --- [Thread-18] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2020-12-30 13:18:49.547  INFO 9504 --- [Thread-18] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2020-12-30 13:18:49.703  INFO 9504 --- [restartedMain] com.wenyu.blog.BlogApplication           : Starting BlogApplication on lt41137t480 with PID 9504 (E:\blog\blog\target\classes started by Administrator in E:\blog\blog)
+2020-12-30 13:18:49.703 DEBUG 9504 --- [restartedMain] com.wenyu.blog.BlogApplication           : Running with Spring Boot v2.3.5.RELEASE, Spring v5.2.10.RELEASE
+2020-12-30 13:18:49.703  INFO 9504 --- [restartedMain] com.wenyu.blog.BlogApplication           : No active profile set, falling back to default profiles: default
+2020-12-30 13:18:49.813  INFO 9504 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-12-30 13:18:49.813  INFO 9504 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 6ms. Found 1 JPA repository interfaces.
+2020-12-30 13:18:49.891  INFO 9504 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-12-30 13:18:49.891  INFO 9504 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-12-30 13:18:49.891  INFO 9504 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.39]
+2020-12-30 13:18:49.906  INFO 9504 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-12-30 13:18:49.906  INFO 9504 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 203 ms
+2020-12-30 13:18:49.937  INFO 9504 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-12-30 13:18:49.937  INFO 9504 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-12-30 13:18:49.937  INFO 9504 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2020-12-30 13:18:49.937  INFO 9504 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2020-12-30 13:18:49.937  INFO 9504 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2020-12-30 13:18:49.969  WARN 9504 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-12-30 13:18:49.969  INFO 9504 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-12-30 13:18:49.969  INFO 9504 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-12-30 13:18:50.000  INFO 9504 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-12-30 13:18:50.015  INFO 9504 --- [task-2] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-12-30 13:18:50.015  WARN 9504 --- [restartedMain] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][restartedMain] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+2020-12-30 13:18:50.078  INFO 9504 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-12-30 13:18:50.078  INFO 9504 --- [restartedMain] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+2020-12-30 13:18:50.109  INFO 9504 --- [restartedMain] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2020-12-30 13:18:50.109  INFO 9504 --- [restartedMain] com.wenyu.blog.BlogApplication           : Started BlogApplication in 0.426 seconds (JVM running for 924.947)
+2020-12-30 13:18:50.109  INFO 9504 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2020-12-30 13:19:00.982  INFO 9504 --- [Thread-23] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-12-30 13:19:00.982  INFO 9504 --- [Thread-23] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-12-30 13:19:00.982  INFO 9504 --- [Thread-23] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
+2020-12-30 13:19:00.998  INFO 9504 --- [Thread-23] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
+2020-12-30 13:19:01.169  INFO 9504 --- [restartedMain] com.wenyu.blog.BlogApplication           : Starting BlogApplication on lt41137t480 with PID 9504 (E:\blog\blog\target\classes started by Administrator in E:\blog\blog)
+2020-12-30 13:19:01.169 DEBUG 9504 --- [restartedMain] com.wenyu.blog.BlogApplication           : Running with Spring Boot v2.3.5.RELEASE, Spring v5.2.10.RELEASE
+2020-12-30 13:19:01.169  INFO 9504 --- [restartedMain] com.wenyu.blog.BlogApplication           : No active profile set, falling back to default profiles: default
+2020-12-30 13:19:01.279  INFO 9504 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-12-30 13:19:01.279  INFO 9504 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 6ms. Found 1 JPA repository interfaces.
+2020-12-30 13:19:01.357  INFO 9504 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-12-30 13:19:01.357  INFO 9504 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-12-30 13:19:01.357  INFO 9504 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.39]
+2020-12-30 13:19:01.357  INFO 9504 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-12-30 13:19:01.357  INFO 9504 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 188 ms
+2020-12-30 13:19:01.388  INFO 9504 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-12-30 13:19:01.388  INFO 9504 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-12-30 13:19:01.403  INFO 9504 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Starting...
+2020-12-30 13:19:01.403  INFO 9504 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Start completed.
+2020-12-30 13:19:01.403  INFO 9504 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2020-12-30 13:19:01.419  INFO 9504 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-12-30 13:19:01.419  INFO 9504 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-12-30 13:19:01.419  WARN 9504 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-12-30 13:19:01.461  INFO 9504 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-12-30 13:19:01.477  INFO 9504 --- [task-2] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-12-30 13:19:01.477  WARN 9504 --- [restartedMain] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][restartedMain] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+2020-12-30 13:19:01.555  INFO 9504 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-12-30 13:19:01.555  INFO 9504 --- [restartedMain] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+2020-12-30 13:19:01.570  INFO 9504 --- [restartedMain] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2020-12-30 13:19:01.570  INFO 9504 --- [restartedMain] com.wenyu.blog.BlogApplication           : Started BlogApplication in 0.431 seconds (JVM running for 936.41)
+2020-12-30 13:19:01.570  INFO 9504 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2020-12-30 13:20:41.605  INFO 9504 --- [Thread-28] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-12-30 13:20:41.605  INFO 9504 --- [Thread-28] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-12-30 13:20:41.605  INFO 9504 --- [Thread-28] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown initiated...
+2020-12-30 13:20:41.608  INFO 9504 --- [Thread-28] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown completed.
+2020-12-30 13:20:41.767  INFO 9504 --- [restartedMain] com.wenyu.blog.BlogApplication           : Starting BlogApplication on lt41137t480 with PID 9504 (E:\blog\blog\target\classes started by Administrator in E:\blog\blog)
+2020-12-30 13:20:41.767 DEBUG 9504 --- [restartedMain] com.wenyu.blog.BlogApplication           : Running with Spring Boot v2.3.5.RELEASE, Spring v5.2.10.RELEASE
+2020-12-30 13:20:41.767  INFO 9504 --- [restartedMain] com.wenyu.blog.BlogApplication           : No active profile set, falling back to default profiles: default
+2020-12-30 13:20:41.865  INFO 9504 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-12-30 13:20:41.873  INFO 9504 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 7ms. Found 1 JPA repository interfaces.
+2020-12-30 13:20:41.948  INFO 9504 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-12-30 13:20:41.949  INFO 9504 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-12-30 13:20:41.949  INFO 9504 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.39]
+2020-12-30 13:20:41.956  INFO 9504 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-12-30 13:20:41.957  INFO 9504 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 188 ms
+2020-12-30 13:20:41.984  INFO 9504 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-12-30 13:20:41.988  INFO 9504 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-12-30 13:20:41.993  INFO 9504 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Starting...
+2020-12-30 13:20:41.996  INFO 9504 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Start completed.
+2020-12-30 13:20:41.996  INFO 9504 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2020-12-30 13:20:42.016  WARN 9504 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-12-30 13:20:42.019  INFO 9504 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-12-30 13:20:42.019  INFO 9504 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-12-30 13:20:42.052  INFO 9504 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-12-30 13:20:42.058  INFO 9504 --- [task-2] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-12-30 13:20:42.066  WARN 9504 --- [restartedMain] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][restartedMain] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+2020-12-30 13:20:42.139  INFO 9504 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-12-30 13:20:42.140  INFO 9504 --- [restartedMain] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+2020-12-30 13:20:42.162  INFO 9504 --- [restartedMain] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2020-12-30 13:20:42.164  INFO 9504 --- [restartedMain] com.wenyu.blog.BlogApplication           : Started BlogApplication in 0.425 seconds (JVM running for 1036.983)
+2020-12-30 13:20:42.165  INFO 9504 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2020-12-30 13:21:15.995  INFO 9504 --- [Thread-33] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-12-30 13:21:15.995  INFO 9504 --- [Thread-33] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-12-30 13:21:15.995  INFO 9504 --- [Thread-33] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown initiated...
+2020-12-30 13:21:16.011  INFO 9504 --- [Thread-33] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown completed.
+2020-12-30 13:21:16.120  INFO 9504 --- [restartedMain] com.wenyu.blog.BlogApplication           : Starting BlogApplication on lt41137t480 with PID 9504 (E:\blog\blog\target\classes started by Administrator in E:\blog\blog)
+2020-12-30 13:21:16.120 DEBUG 9504 --- [restartedMain] com.wenyu.blog.BlogApplication           : Running with Spring Boot v2.3.5.RELEASE, Spring v5.2.10.RELEASE
+2020-12-30 13:21:16.120  INFO 9504 --- [restartedMain] com.wenyu.blog.BlogApplication           : No active profile set, falling back to default profiles: default
+2020-12-30 13:21:16.229  INFO 9504 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-12-30 13:21:16.245  INFO 9504 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 10ms. Found 1 JPA repository interfaces.
+2020-12-30 13:21:16.307  INFO 9504 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-12-30 13:21:16.307  INFO 9504 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-12-30 13:21:16.307  INFO 9504 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.39]
+2020-12-30 13:21:16.323  INFO 9504 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-12-30 13:21:16.323  INFO 9504 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 187 ms
+2020-12-30 13:21:16.354  INFO 9504 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-12-30 13:21:16.354  INFO 9504 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-12-30 13:21:16.354  INFO 9504 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Starting...
+2020-12-30 13:21:16.354  INFO 9504 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Start completed.
+2020-12-30 13:21:16.354  INFO 9504 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2020-12-30 13:21:16.370  WARN 9504 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-12-30 13:21:16.385  INFO 9504 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-12-30 13:21:16.385  INFO 9504 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-12-30 13:21:16.416  INFO 9504 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-12-30 13:21:16.432  WARN 9504 --- [restartedMain] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][restartedMain] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+2020-12-30 13:21:16.432  INFO 9504 --- [task-2] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-12-30 13:21:16.511  INFO 9504 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-12-30 13:21:16.511  INFO 9504 --- [restartedMain] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+2020-12-30 13:21:16.532  INFO 9504 --- [restartedMain] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2020-12-30 13:21:16.534  INFO 9504 --- [restartedMain] com.wenyu.blog.BlogApplication           : Started BlogApplication in 0.422 seconds (JVM running for 1071.349)
+2020-12-30 13:21:16.535  INFO 9504 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2020-12-30 13:22:03.568  INFO 1576 --- [restartedMain] com.wenyu.blog.BlogApplication           : Starting BlogApplication on lt41137t480 with PID 1576 (E:\blog\blog\target\classes started by Administrator in E:\blog\blog)
+2020-12-30 13:22:03.584 DEBUG 1576 --- [restartedMain] com.wenyu.blog.BlogApplication           : Running with Spring Boot v2.3.5.RELEASE, Spring v5.2.10.RELEASE
+2020-12-30 13:22:03.584  INFO 1576 --- [restartedMain] com.wenyu.blog.BlogApplication           : No active profile set, falling back to default profiles: default
+2020-12-30 13:22:03.615  INFO 1576 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-12-30 13:22:03.615  INFO 1576 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-12-30 13:22:04.208  INFO 1576 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-12-30 13:22:04.254  INFO 1576 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 39ms. Found 1 JPA repository interfaces.
+2020-12-30 13:22:04.732  INFO 1576 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-12-30 13:22:04.732  INFO 1576 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-12-30 13:22:04.732  INFO 1576 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.39]
+2020-12-30 13:22:04.810  INFO 1576 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-12-30 13:22:04.810  INFO 1576 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1195 ms
+2020-12-30 13:22:04.904  INFO 1576 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-12-30 13:22:04.935  INFO 1576 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-12-30 13:22:05.013  INFO 1576 --- [task-1] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.22.Final
+2020-12-30 13:22:05.107  INFO 1576 --- [task-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-12-30 13:22:05.185  INFO 1576 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-12-30 13:22:05.200  WARN 1576 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-12-30 13:22:05.341  INFO 1576 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-12-30 13:22:05.356  INFO 1576 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-12-30 13:22:05.356  INFO 1576 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2020-12-30 13:22:05.388  WARN 1576 --- [restartedMain] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][restartedMain] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+2020-12-30 13:22:05.502  INFO 1576 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-12-30 13:22:05.558  INFO 1576 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-12-30 13:22:05.560  INFO 1576 --- [restartedMain] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+2020-12-30 13:22:05.827  INFO 1576 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-12-30 13:22:05.833  INFO 1576 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-12-30 13:22:06.051  INFO 1576 --- [restartedMain] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2020-12-30 13:22:06.058  INFO 1576 --- [restartedMain] com.wenyu.blog.BlogApplication           : Started BlogApplication in 2.821 seconds (JVM running for 3.556)
+2020-12-30 13:22:14.548  INFO 1576 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-12-30 13:22:14.549  INFO 1576 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-12-30 13:22:14.553  INFO 1576 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
+2020-12-30 13:22:19.841 DEBUG 1576 --- [http-nio-8080-exec-5] c.w.b.m.U.findByUsernameAndPassword      : ==>  Preparing: select * from t_user where username = ? and password = ?
+2020-12-30 13:22:19.855 DEBUG 1576 --- [http-nio-8080-exec-5] c.w.b.m.U.findByUsernameAndPassword      : ==> Parameters: admin(String), 96e79218965eb72c92a549dd5a330112(String)
+2020-12-30 13:22:19.862 DEBUG 1576 --- [http-nio-8080-exec-5] c.w.b.m.U.findByUsernameAndPassword      : <==      Total: 1
+2020-12-30 13:22:26.965 DEBUG 1576 --- [http-nio-8080-exec-5] c.w.blog.mapper.TypeMapper.selectByName  : ==>  Preparing: select * from t_type where name = ?
+2020-12-30 13:22:26.979 ERROR 1576 --- [http-nio-8080-exec-5] c.w.b.h.ControllerExceptionHandler       : Requst URL : http://localhost:8080/admin/types，Exception : {}
 
-org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported
-	at org.springframework.web.servlet.mvc.method.RequestMappingInfoHandlerMapping.handleNoMatch(RequestMappingInfoHandlerMapping.java:213)
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.lookupHandlerMethod(AbstractHandlerMethodMapping.java:422)
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.getHandlerInternal(AbstractHandlerMethodMapping.java:367)
-	at org.springframework.web.servlet.mvc.method.RequestMappingInfoHandlerMapping.getHandlerInternal(RequestMappingInfoHandlerMapping.java:110)
-	at org.springframework.web.servlet.mvc.method.RequestMappingInfoHandlerMapping.getHandlerInternal(RequestMappingInfoHandlerMapping.java:59)
-	at org.springframework.web.servlet.handler.AbstractHandlerMapping.getHandler(AbstractHandlerMapping.java:396)
-	at org.springframework.web.servlet.DispatcherServlet.getHandler(DispatcherServlet.java:1234)
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1016)
+org.mybatis.spring.MyBatisSystemException: nested exception is org.apache.ibatis.type.TypeException: Could not set parameters for mapping: ParameterMapping{property='name', mode=IN, javaType=class java.lang.Long, jdbcType=null, numericScale=null, resultMapId='null', jdbcTypeName='null', expression='null'}. Cause: org.apache.ibatis.type.TypeException: Error setting non null for parameter #1 with JdbcType null . Try setting a different JdbcType for this parameter or a different configuration property. Cause: java.lang.ClassCastException: java.lang.String cannot be cast to java.lang.Long
+	at org.mybatis.spring.MyBatisExceptionTranslator.translateExceptionIfPossible(MyBatisExceptionTranslator.java:92)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:440)
+	at com.sun.proxy.$Proxy72.selectOne(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.selectOne(SqlSessionTemplate.java:159)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:87)
+	at org.apache.ibatis.binding.MapperProxy$PlainMethodInvoker.invoke(MapperProxy.java:152)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:85)
+	at com.sun.proxy.$Proxy80.selectByName(Unknown Source)
+	at com.wenyu.blog.service.impl.TypeServiceImpl.selectByName(TypeServiceImpl.java:71)
+	at com.wenyu.blog.service.impl.TypeServiceImpl$$FastClassBySpringCGLIB$$a1919cf3.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:687)
+	at com.wenyu.blog.service.impl.TypeServiceImpl$$EnhancerBySpringCGLIB$$8d6c5b66.selectByName(<generated>)
+	at com.wenyu.blog.web.admin.TypeController.input(TypeController.java:49)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:105)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:878)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:792)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040)
 	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
 	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
-	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:626)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:652)
 	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
@@ -152,113 +324,828 @@ org.springframework.web.HttpRequestMethodNotSupportedException: Request method '
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.apache.ibatis.type.TypeException: Could not set parameters for mapping: ParameterMapping{property='name', mode=IN, javaType=class java.lang.Long, jdbcType=null, numericScale=null, resultMapId='null', jdbcTypeName='null', expression='null'}. Cause: org.apache.ibatis.type.TypeException: Error setting non null for parameter #1 with JdbcType null . Try setting a different JdbcType for this parameter or a different configuration property. Cause: java.lang.ClassCastException: java.lang.String cannot be cast to java.lang.Long
+	at org.apache.ibatis.scripting.defaults.DefaultParameterHandler.setParameters(DefaultParameterHandler.java:89)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.parameterize(PreparedStatementHandler.java:94)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.parameterize(RoutingStatementHandler.java:64)
+	at org.apache.ibatis.executor.SimpleExecutor.prepareStatement(SimpleExecutor.java:88)
+	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:62)
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:325)
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:156)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:109)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:89)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:147)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:140)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectOne(DefaultSqlSession.java:76)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:426)
+	... 62 common frames omitted
+Caused by: org.apache.ibatis.type.TypeException: Error setting non null for parameter #1 with JdbcType null . Try setting a different JdbcType for this parameter or a different configuration property. Cause: java.lang.ClassCastException: java.lang.String cannot be cast to java.lang.Long
+	at org.apache.ibatis.type.BaseTypeHandler.setParameter(BaseTypeHandler.java:75)
+	at org.apache.ibatis.scripting.defaults.DefaultParameterHandler.setParameters(DefaultParameterHandler.java:87)
+	... 78 common frames omitted
+Caused by: java.lang.ClassCastException: java.lang.String cannot be cast to java.lang.Long
+	at org.apache.ibatis.type.LongTypeHandler.setNonNullParameter(LongTypeHandler.java:26)
+	at org.apache.ibatis.type.BaseTypeHandler.setParameter(BaseTypeHandler.java:73)
+	... 79 common frames omitted
 
-2020-12-28 14:12:20.252  WARN 9072 --- [http-nio-8080-exec-7] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported]
-2020-12-28 14:18:25.841 DEBUG 9072 --- [http-nio-8080-exec-7] c.w.b.m.U.findByUsernameAndPassword      : ==>  Preparing: select * from t_user where username = ? and password = ?
-2020-12-28 14:18:25.841 DEBUG 9072 --- [http-nio-8080-exec-7] c.w.b.m.U.findByUsernameAndPassword      : ==> Parameters: admin(String), 96e79218965eb72c92a549dd5a330112(String)
-2020-12-28 14:18:25.843 DEBUG 9072 --- [http-nio-8080-exec-7] c.w.b.m.U.findByUsernameAndPassword      : <==      Total: 1
-2020-12-28 14:18:59.669  INFO 8128 --- [restartedMain] com.wenyu.blog.BlogApplication           : Starting BlogApplication on lt41137t480 with PID 8128 (E:\blog\blog\target\classes started by Administrator in E:\blog\blog)
-2020-12-28 14:18:59.672 DEBUG 8128 --- [restartedMain] com.wenyu.blog.BlogApplication           : Running with Spring Boot v2.3.5.RELEASE, Spring v5.2.10.RELEASE
-2020-12-28 14:18:59.672  INFO 8128 --- [restartedMain] com.wenyu.blog.BlogApplication           : No active profile set, falling back to default profiles: default
-2020-12-28 14:18:59.728  INFO 8128 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2020-12-28 14:18:59.728  INFO 8128 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2020-12-28 14:19:00.550  INFO 8128 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
-2020-12-28 14:19:00.571  INFO 8128 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 11ms. Found 0 JPA repository interfaces.
-2020-12-28 14:19:01.218  INFO 8128 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2020-12-28 14:19:01.228  INFO 8128 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2020-12-28 14:19:01.228  INFO 8128 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.39]
-2020-12-28 14:19:01.341  INFO 8128 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2020-12-28 14:19:01.341  INFO 8128 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1612 ms
-2020-12-28 14:19:01.597  INFO 8128 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2020-12-28 14:19:01.663  INFO 8128 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2020-12-28 14:19:01.767  INFO 8128 --- [task-1] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.22.Final
-2020-12-28 14:19:02.128  INFO 8128 --- [task-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
-2020-12-28 14:19:02.270  WARN 8128 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2020-12-28 14:19:02.280  INFO 8128 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2020-12-28 14:19:02.596  INFO 8128 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
-2020-12-28 14:19:02.597  INFO 8128 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2020-12-28 14:19:02.619  INFO 8128 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
-2020-12-28 14:19:02.675  WARN 8128 --- [restartedMain] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][restartedMain] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
-2020-12-28 14:19:02.865  INFO 8128 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2020-12-28 14:19:02.908  INFO 8128 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2020-12-28 14:19:02.920  INFO 8128 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2020-12-28 14:19:02.961  INFO 8128 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2020-12-28 14:19:02.962  INFO 8128 --- [restartedMain] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
-2020-12-28 14:19:02.963  INFO 8128 --- [restartedMain] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
-2020-12-28 14:19:02.977  INFO 8128 --- [restartedMain] com.wenyu.blog.BlogApplication           : Started BlogApplication in 3.89 seconds (JVM running for 4.934)
-2020-12-28 14:19:04.494  INFO 8128 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2020-12-28 14:19:04.494  INFO 8128 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2020-12-28 14:19:04.499  INFO 8128 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms
-2020-12-28 14:19:10.139 DEBUG 8128 --- [http-nio-8080-exec-7] c.w.b.m.U.findByUsernameAndPassword      : ==>  Preparing: select * from t_user where username = ? and password = ?
-2020-12-28 14:19:10.154 DEBUG 8128 --- [http-nio-8080-exec-7] c.w.b.m.U.findByUsernameAndPassword      : ==> Parameters: admin(String), 96e79218965eb72c92a549dd5a330112(String)
-2020-12-28 14:19:10.162 DEBUG 8128 --- [http-nio-8080-exec-7] c.w.b.m.U.findByUsernameAndPassword      : <==      Total: 1
-2020-12-28 14:20:51.477  INFO 2728 --- [restartedMain] com.wenyu.blog.BlogApplication           : Starting BlogApplication on lt41137t480 with PID 2728 (E:\blog\blog\target\classes started by Administrator in E:\blog\blog)
-2020-12-28 14:20:51.481 DEBUG 2728 --- [restartedMain] com.wenyu.blog.BlogApplication           : Running with Spring Boot v2.3.5.RELEASE, Spring v5.2.10.RELEASE
-2020-12-28 14:20:51.481  INFO 2728 --- [restartedMain] com.wenyu.blog.BlogApplication           : No active profile set, falling back to default profiles: default
-2020-12-28 14:20:51.539  INFO 2728 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2020-12-28 14:20:51.540  INFO 2728 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2020-12-28 14:20:52.259  INFO 2728 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
-2020-12-28 14:20:52.280  INFO 2728 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 10ms. Found 0 JPA repository interfaces.
-2020-12-28 14:20:52.908  INFO 2728 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2020-12-28 14:20:52.917  INFO 2728 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2020-12-28 14:20:52.918  INFO 2728 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.39]
-2020-12-28 14:20:53.009  INFO 2728 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2020-12-28 14:20:53.009  INFO 2728 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1468 ms
-2020-12-28 14:20:53.193  INFO 2728 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2020-12-28 14:20:53.262  INFO 2728 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2020-12-28 14:20:53.325  INFO 2728 --- [task-1] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.22.Final
-2020-12-28 14:20:53.615  INFO 2728 --- [task-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
-2020-12-28 14:20:53.730  WARN 2728 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2020-12-28 14:20:53.742  INFO 2728 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2020-12-28 14:20:53.928  INFO 2728 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
-2020-12-28 14:20:53.957  INFO 2728 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2020-12-28 14:20:53.977  INFO 2728 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
-2020-12-28 14:20:53.992  WARN 2728 --- [restartedMain] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][restartedMain] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
-2020-12-28 14:20:54.150  INFO 2728 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2020-12-28 14:20:54.200  INFO 2728 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2020-12-28 14:20:54.209  INFO 2728 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2020-12-28 14:20:54.223  INFO 2728 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2020-12-28 14:20:54.224  INFO 2728 --- [restartedMain] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
-2020-12-28 14:20:54.225  INFO 2728 --- [restartedMain] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
-2020-12-28 14:20:54.234  INFO 2728 --- [restartedMain] com.wenyu.blog.BlogApplication           : Started BlogApplication in 3.308 seconds (JVM running for 4.312)
-2020-12-28 14:20:58.656  INFO 2728 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2020-12-28 14:20:58.656  INFO 2728 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2020-12-28 14:20:58.661  INFO 2728 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms
-2020-12-28 14:21:04.158 DEBUG 2728 --- [http-nio-8080-exec-3] c.w.b.m.U.findByUsernameAndPassword      : ==>  Preparing: select * from t_user where username = ? and password = ?
-2020-12-28 14:21:04.183 DEBUG 2728 --- [http-nio-8080-exec-3] c.w.b.m.U.findByUsernameAndPassword      : ==> Parameters: admin(String), 96e79218965eb72c92a549dd5a330112(String)
-2020-12-28 14:21:04.193 DEBUG 2728 --- [http-nio-8080-exec-3] c.w.b.m.U.findByUsernameAndPassword      : <==      Total: 1
-2020-12-28 16:41:39.988  INFO 11048 --- [restartedMain] com.wenyu.blog.BlogApplication           : Starting BlogApplication on lt41137t480 with PID 11048 (E:\blog\blog\target\classes started by Administrator in E:\blog\blog)
-2020-12-28 16:41:40.004 DEBUG 11048 --- [restartedMain] com.wenyu.blog.BlogApplication           : Running with Spring Boot v2.3.5.RELEASE, Spring v5.2.10.RELEASE
-2020-12-28 16:41:40.004  INFO 11048 --- [restartedMain] com.wenyu.blog.BlogApplication           : No active profile set, falling back to default profiles: default
-2020-12-28 16:41:40.050  INFO 11048 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2020-12-28 16:41:40.050  INFO 11048 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2020-12-28 16:41:40.721  INFO 11048 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
-2020-12-28 16:41:40.737  INFO 11048 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 9ms. Found 0 JPA repository interfaces.
-2020-12-28 16:41:41.345  INFO 11048 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2020-12-28 16:41:41.345  INFO 11048 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2020-12-28 16:41:41.345  INFO 11048 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.39]
-2020-12-28 16:41:41.439  INFO 11048 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2020-12-28 16:41:41.439  INFO 11048 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1389 ms
-2020-12-28 16:41:41.579  INFO 11048 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2020-12-28 16:41:41.626  INFO 11048 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2020-12-28 16:41:41.673  INFO 11048 --- [task-1] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.22.Final
-2020-12-28 16:41:41.876  INFO 11048 --- [task-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
-2020-12-28 16:41:41.954  WARN 11048 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2020-12-28 16:41:41.969  INFO 11048 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2020-12-28 16:41:42.125  INFO 11048 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
-2020-12-28 16:41:42.141  INFO 11048 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2020-12-28 16:41:42.156  INFO 11048 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
-2020-12-28 16:41:42.172  WARN 11048 --- [restartedMain] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][restartedMain] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
-2020-12-28 16:41:42.281  INFO 11048 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2020-12-28 16:41:42.344  INFO 11048 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2020-12-28 16:41:42.344  INFO 11048 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2020-12-28 16:41:42.359  INFO 11048 --- [restartedMain] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
-2020-12-28 16:41:42.359  INFO 11048 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2020-12-28 16:41:42.359  INFO 11048 --- [restartedMain] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
-2020-12-28 16:41:42.359  INFO 11048 --- [restartedMain] com.wenyu.blog.BlogApplication           : Started BlogApplication in 2.866 seconds (JVM running for 3.825)
-2020-12-28 16:41:52.344  INFO 11048 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2020-12-28 16:41:52.345  INFO 11048 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2020-12-28 16:41:52.350  INFO 11048 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms
-2020-12-28 16:41:58.475 DEBUG 11048 --- [http-nio-8080-exec-1] c.w.b.m.U.findByUsernameAndPassword      : ==>  Preparing: select * from t_user where username = ? and password = ?
-2020-12-28 16:41:58.489 DEBUG 11048 --- [http-nio-8080-exec-1] c.w.b.m.U.findByUsernameAndPassword      : ==> Parameters: admin(String), 96e79218965eb72c92a549dd5a330112(String)
-2020-12-28 16:41:58.497 DEBUG 11048 --- [http-nio-8080-exec-1] c.w.b.m.U.findByUsernameAndPassword      : <==      Total: 1
+2020-12-30 13:22:26.981  WARN 1576 --- [http-nio-8080-exec-5] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.mybatis.spring.MyBatisSystemException: nested exception is org.apache.ibatis.type.TypeException: Could not set parameters for mapping: ParameterMapping{property='name', mode=IN, javaType=class java.lang.Long, jdbcType=null, numericScale=null, resultMapId='null', jdbcTypeName='null', expression='null'}. Cause: org.apache.ibatis.type.TypeException: Error setting non null for parameter #1 with JdbcType null . Try setting a different JdbcType for this parameter or a different configuration property. Cause: java.lang.ClassCastException: java.lang.String cannot be cast to java.lang.Long]
+2020-12-30 13:22:55.996  INFO 7172 --- [restartedMain] com.wenyu.blog.BlogApplication           : Starting BlogApplication on lt41137t480 with PID 7172 (E:\blog\blog\target\classes started by Administrator in E:\blog\blog)
+2020-12-30 13:22:55.996 DEBUG 7172 --- [restartedMain] com.wenyu.blog.BlogApplication           : Running with Spring Boot v2.3.5.RELEASE, Spring v5.2.10.RELEASE
+2020-12-30 13:22:55.996  INFO 7172 --- [restartedMain] com.wenyu.blog.BlogApplication           : No active profile set, falling back to default profiles: default
+2020-12-30 13:22:56.027  INFO 7172 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-12-30 13:22:56.027  INFO 7172 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-12-30 13:22:56.729  INFO 7172 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-12-30 13:22:56.776  INFO 7172 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 42ms. Found 1 JPA repository interfaces.
+2020-12-30 13:22:57.263  INFO 7172 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-12-30 13:22:57.263  INFO 7172 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-12-30 13:22:57.263  INFO 7172 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.39]
+2020-12-30 13:22:57.341  INFO 7172 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-12-30 13:22:57.341  INFO 7172 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1314 ms
+2020-12-30 13:22:57.461  INFO 7172 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-12-30 13:22:57.587  INFO 7172 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-12-30 13:22:57.634  INFO 7172 --- [task-1] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.22.Final
+2020-12-30 13:22:57.728  INFO 7172 --- [task-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-12-30 13:22:57.821  INFO 7172 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-12-30 13:22:57.853  WARN 7172 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-12-30 13:22:57.977  INFO 7172 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-12-30 13:22:57.993  INFO 7172 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2020-12-30 13:22:58.055  INFO 7172 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-12-30 13:22:58.133  WARN 7172 --- [restartedMain] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][restartedMain] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+2020-12-30 13:22:58.274  INFO 7172 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-12-30 13:22:58.352  INFO 7172 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-12-30 13:22:58.352  INFO 7172 --- [restartedMain] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+2020-12-30 13:22:58.636  INFO 7172 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-12-30 13:22:58.636  INFO 7172 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-12-30 13:22:58.839  INFO 7172 --- [restartedMain] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2020-12-30 13:22:58.854  INFO 7172 --- [restartedMain] com.wenyu.blog.BlogApplication           : Started BlogApplication in 3.214 seconds (JVM running for 3.919)
+2020-12-30 13:23:03.403  INFO 7172 --- [http-nio-8080-exec-5] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-12-30 13:23:03.403  INFO 7172 --- [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-12-30 13:23:03.407  INFO 7172 --- [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
+2020-12-30 13:23:16.872 DEBUG 7172 --- [http-nio-8080-exec-10] c.w.b.m.U.findByUsernameAndPassword      : ==>  Preparing: select * from t_user where username = ? and password = ?
+2020-12-30 13:23:16.885 DEBUG 7172 --- [http-nio-8080-exec-10] c.w.b.m.U.findByUsernameAndPassword      : ==> Parameters: admin(String), 96e79218965eb72c92a549dd5a330112(String)
+2020-12-30 13:23:16.894 DEBUG 7172 --- [http-nio-8080-exec-10] c.w.b.m.U.findByUsernameAndPassword      : <==      Total: 1
+2020-12-30 13:23:24.872 DEBUG 7172 --- [http-nio-8080-exec-10] c.w.blog.mapper.TypeMapper.selectByName  : ==>  Preparing: select * from t_type where name = ?
+2020-12-30 13:23:24.877 ERROR 7172 --- [http-nio-8080-exec-10] c.w.b.h.ControllerExceptionHandler       : Requst URL : http://localhost:8080/admin/types，Exception : {}
+
+org.mybatis.spring.MyBatisSystemException: nested exception is org.apache.ibatis.type.TypeException: Could not set parameters for mapping: ParameterMapping{property='name', mode=IN, javaType=class java.lang.Long, jdbcType=null, numericScale=null, resultMapId='null', jdbcTypeName='null', expression='null'}. Cause: org.apache.ibatis.type.TypeException: Error setting non null for parameter #1 with JdbcType null . Try setting a different JdbcType for this parameter or a different configuration property. Cause: java.lang.ClassCastException: java.lang.String cannot be cast to java.lang.Long
+	at org.mybatis.spring.MyBatisExceptionTranslator.translateExceptionIfPossible(MyBatisExceptionTranslator.java:92)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:440)
+	at com.sun.proxy.$Proxy72.selectOne(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.selectOne(SqlSessionTemplate.java:159)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:87)
+	at org.apache.ibatis.binding.MapperProxy$PlainMethodInvoker.invoke(MapperProxy.java:152)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:85)
+	at com.sun.proxy.$Proxy80.selectByName(Unknown Source)
+	at com.wenyu.blog.service.impl.TypeServiceImpl.selectByName(TypeServiceImpl.java:71)
+	at com.wenyu.blog.service.impl.TypeServiceImpl$$FastClassBySpringCGLIB$$a1919cf3.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:687)
+	at com.wenyu.blog.service.impl.TypeServiceImpl$$EnhancerBySpringCGLIB$$53726457.selectByName(<generated>)
+	at com.wenyu.blog.web.admin.TypeController.input(TypeController.java:49)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:105)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:878)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:792)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:652)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1590)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.apache.ibatis.type.TypeException: Could not set parameters for mapping: ParameterMapping{property='name', mode=IN, javaType=class java.lang.Long, jdbcType=null, numericScale=null, resultMapId='null', jdbcTypeName='null', expression='null'}. Cause: org.apache.ibatis.type.TypeException: Error setting non null for parameter #1 with JdbcType null . Try setting a different JdbcType for this parameter or a different configuration property. Cause: java.lang.ClassCastException: java.lang.String cannot be cast to java.lang.Long
+	at org.apache.ibatis.scripting.defaults.DefaultParameterHandler.setParameters(DefaultParameterHandler.java:89)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.parameterize(PreparedStatementHandler.java:94)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.parameterize(RoutingStatementHandler.java:64)
+	at org.apache.ibatis.executor.SimpleExecutor.prepareStatement(SimpleExecutor.java:88)
+	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:62)
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:325)
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:156)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:109)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:89)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:147)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:140)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectOne(DefaultSqlSession.java:76)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:426)
+	... 62 common frames omitted
+Caused by: org.apache.ibatis.type.TypeException: Error setting non null for parameter #1 with JdbcType null . Try setting a different JdbcType for this parameter or a different configuration property. Cause: java.lang.ClassCastException: java.lang.String cannot be cast to java.lang.Long
+	at org.apache.ibatis.type.BaseTypeHandler.setParameter(BaseTypeHandler.java:75)
+	at org.apache.ibatis.scripting.defaults.DefaultParameterHandler.setParameters(DefaultParameterHandler.java:87)
+	... 78 common frames omitted
+Caused by: java.lang.ClassCastException: java.lang.String cannot be cast to java.lang.Long
+	at org.apache.ibatis.type.LongTypeHandler.setNonNullParameter(LongTypeHandler.java:26)
+	at org.apache.ibatis.type.BaseTypeHandler.setParameter(BaseTypeHandler.java:73)
+	... 79 common frames omitted
+
+2020-12-30 13:23:24.878  WARN 7172 --- [http-nio-8080-exec-10] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.mybatis.spring.MyBatisSystemException: nested exception is org.apache.ibatis.type.TypeException: Could not set parameters for mapping: ParameterMapping{property='name', mode=IN, javaType=class java.lang.Long, jdbcType=null, numericScale=null, resultMapId='null', jdbcTypeName='null', expression='null'}. Cause: org.apache.ibatis.type.TypeException: Error setting non null for parameter #1 with JdbcType null . Try setting a different JdbcType for this parameter or a different configuration property. Cause: java.lang.ClassCastException: java.lang.String cannot be cast to java.lang.Long]
+2020-12-30 13:24:45.180  INFO 9980 --- [restartedMain] com.wenyu.blog.BlogApplication           : Starting BlogApplication on lt41137t480 with PID 9980 (E:\blog\blog\target\classes started by Administrator in E:\blog\blog)
+2020-12-30 13:24:45.182 DEBUG 9980 --- [restartedMain] com.wenyu.blog.BlogApplication           : Running with Spring Boot v2.3.5.RELEASE, Spring v5.2.10.RELEASE
+2020-12-30 13:24:45.182  INFO 9980 --- [restartedMain] com.wenyu.blog.BlogApplication           : No active profile set, falling back to default profiles: default
+2020-12-30 13:24:45.224  INFO 9980 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-12-30 13:24:45.224  INFO 9980 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-12-30 13:24:45.833  INFO 9980 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-12-30 13:24:45.864  INFO 9980 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 32ms. Found 1 JPA repository interfaces.
+2020-12-30 13:24:46.270  INFO 9980 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-12-30 13:24:46.270  INFO 9980 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-12-30 13:24:46.270  INFO 9980 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.39]
+2020-12-30 13:24:46.348  INFO 9980 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-12-30 13:24:46.348  INFO 9980 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1124 ms
+2020-12-30 13:24:46.441  INFO 9980 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-12-30 13:24:46.546  INFO 9980 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-12-30 13:24:46.593  INFO 9980 --- [task-1] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.22.Final
+2020-12-30 13:24:46.687  INFO 9980 --- [task-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-12-30 13:24:46.749  INFO 9980 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-12-30 13:24:46.765  WARN 9980 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-12-30 13:24:46.889  INFO 9980 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-12-30 13:24:46.905  INFO 9980 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-12-30 13:24:46.905  INFO 9980 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2020-12-30 13:24:46.952  WARN 9980 --- [restartedMain] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][restartedMain] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+2020-12-30 13:24:47.061  INFO 9980 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-12-30 13:24:47.108  INFO 9980 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-12-30 13:24:47.108  INFO 9980 --- [restartedMain] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+2020-12-30 13:24:47.373  INFO 9980 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-12-30 13:24:47.373  INFO 9980 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-12-30 13:24:47.622  INFO 9980 --- [restartedMain] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2020-12-30 13:24:47.628  INFO 9980 --- [restartedMain] com.wenyu.blog.BlogApplication           : Started BlogApplication in 2.82 seconds (JVM running for 3.539)
+2020-12-30 13:24:55.923  INFO 9980 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-12-30 13:24:55.923  INFO 9980 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-12-30 13:24:55.928  INFO 9980 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms
+2020-12-30 13:25:01.620 DEBUG 9980 --- [http-nio-8080-exec-7] c.w.b.m.U.findByUsernameAndPassword      : ==>  Preparing: select * from t_user where username = ? and password = ?
+2020-12-30 13:25:01.635 DEBUG 9980 --- [http-nio-8080-exec-7] c.w.b.m.U.findByUsernameAndPassword      : ==> Parameters: admin(String), 96e79218965eb72c92a549dd5a330112(String)
+2020-12-30 13:25:01.644 DEBUG 9980 --- [http-nio-8080-exec-7] c.w.b.m.U.findByUsernameAndPassword      : <==      Total: 1
+2020-12-30 13:25:35.916 DEBUG 9980 --- [http-nio-8080-exec-7] c.w.blog.mapper.TypeMapper.selectByName  : ==>  Preparing: select * from t_type where name = ?
+2020-12-30 13:25:35.922 ERROR 9980 --- [http-nio-8080-exec-7] c.w.b.h.ControllerExceptionHandler       : Requst URL : http://localhost:8080/admin/types，Exception : {}
+
+org.mybatis.spring.MyBatisSystemException: nested exception is org.apache.ibatis.type.TypeException: Could not set parameters for mapping: ParameterMapping{property='name', mode=IN, javaType=class java.lang.Long, jdbcType=null, numericScale=null, resultMapId='null', jdbcTypeName='null', expression='null'}. Cause: org.apache.ibatis.type.TypeException: Error setting non null for parameter #1 with JdbcType null . Try setting a different JdbcType for this parameter or a different configuration property. Cause: java.lang.ClassCastException: java.lang.String cannot be cast to java.lang.Long
+	at org.mybatis.spring.MyBatisExceptionTranslator.translateExceptionIfPossible(MyBatisExceptionTranslator.java:92)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:440)
+	at com.sun.proxy.$Proxy72.selectOne(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.selectOne(SqlSessionTemplate.java:159)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:87)
+	at org.apache.ibatis.binding.MapperProxy$PlainMethodInvoker.invoke(MapperProxy.java:152)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:85)
+	at com.sun.proxy.$Proxy80.selectByName(Unknown Source)
+	at com.wenyu.blog.service.impl.TypeServiceImpl.selectByName(TypeServiceImpl.java:71)
+	at com.wenyu.blog.service.impl.TypeServiceImpl$$FastClassBySpringCGLIB$$a1919cf3.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:687)
+	at com.wenyu.blog.service.impl.TypeServiceImpl$$EnhancerBySpringCGLIB$$e8829af2.selectByName(<generated>)
+	at com.wenyu.blog.web.admin.TypeController.input(TypeController.java:49)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:105)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:878)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:792)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:652)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1590)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.apache.ibatis.type.TypeException: Could not set parameters for mapping: ParameterMapping{property='name', mode=IN, javaType=class java.lang.Long, jdbcType=null, numericScale=null, resultMapId='null', jdbcTypeName='null', expression='null'}. Cause: org.apache.ibatis.type.TypeException: Error setting non null for parameter #1 with JdbcType null . Try setting a different JdbcType for this parameter or a different configuration property. Cause: java.lang.ClassCastException: java.lang.String cannot be cast to java.lang.Long
+	at org.apache.ibatis.scripting.defaults.DefaultParameterHandler.setParameters(DefaultParameterHandler.java:89)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.parameterize(PreparedStatementHandler.java:94)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.parameterize(RoutingStatementHandler.java:64)
+	at org.apache.ibatis.executor.SimpleExecutor.prepareStatement(SimpleExecutor.java:88)
+	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:62)
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:325)
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:156)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:109)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:89)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:147)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:140)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectOne(DefaultSqlSession.java:76)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:426)
+	... 62 common frames omitted
+Caused by: org.apache.ibatis.type.TypeException: Error setting non null for parameter #1 with JdbcType null . Try setting a different JdbcType for this parameter or a different configuration property. Cause: java.lang.ClassCastException: java.lang.String cannot be cast to java.lang.Long
+	at org.apache.ibatis.type.BaseTypeHandler.setParameter(BaseTypeHandler.java:75)
+	at org.apache.ibatis.scripting.defaults.DefaultParameterHandler.setParameters(DefaultParameterHandler.java:87)
+	... 78 common frames omitted
+Caused by: java.lang.ClassCastException: java.lang.String cannot be cast to java.lang.Long
+	at org.apache.ibatis.type.LongTypeHandler.setNonNullParameter(LongTypeHandler.java:26)
+	at org.apache.ibatis.type.BaseTypeHandler.setParameter(BaseTypeHandler.java:73)
+	... 79 common frames omitted
+
+2020-12-30 13:25:35.923  WARN 9980 --- [http-nio-8080-exec-7] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.mybatis.spring.MyBatisSystemException: nested exception is org.apache.ibatis.type.TypeException: Could not set parameters for mapping: ParameterMapping{property='name', mode=IN, javaType=class java.lang.Long, jdbcType=null, numericScale=null, resultMapId='null', jdbcTypeName='null', expression='null'}. Cause: org.apache.ibatis.type.TypeException: Error setting non null for parameter #1 with JdbcType null . Try setting a different JdbcType for this parameter or a different configuration property. Cause: java.lang.ClassCastException: java.lang.String cannot be cast to java.lang.Long]
+2020-12-30 13:47:40.386  INFO 11080 --- [restartedMain] com.wenyu.blog.BlogApplication           : Starting BlogApplication on lt41137t480 with PID 11080 (E:\blog\blog\target\classes started by Administrator in E:\blog\blog)
+2020-12-30 13:47:40.389 DEBUG 11080 --- [restartedMain] com.wenyu.blog.BlogApplication           : Running with Spring Boot v2.3.5.RELEASE, Spring v5.2.10.RELEASE
+2020-12-30 13:47:40.390  INFO 11080 --- [restartedMain] com.wenyu.blog.BlogApplication           : No active profile set, falling back to default profiles: default
+2020-12-30 13:47:40.437  INFO 11080 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-12-30 13:47:40.437  INFO 11080 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-12-30 13:47:41.027  INFO 11080 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-12-30 13:47:41.084  INFO 11080 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 44ms. Found 1 JPA repository interfaces.
+2020-12-30 13:47:41.545  INFO 11080 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-12-30 13:47:41.552  INFO 11080 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-12-30 13:47:41.552  INFO 11080 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.39]
+2020-12-30 13:47:41.622  INFO 11080 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-12-30 13:47:41.623  INFO 11080 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1185 ms
+2020-12-30 13:47:41.719  INFO 11080 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-12-30 13:47:41.835  INFO 11080 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-12-30 13:47:41.870  INFO 11080 --- [task-1] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.22.Final
+2020-12-30 13:47:41.966  INFO 11080 --- [task-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-12-30 13:47:42.042  INFO 11080 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-12-30 13:47:42.058  WARN 11080 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-12-30 13:47:42.183  INFO 11080 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-12-30 13:47:42.199  INFO 11080 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2020-12-30 13:47:42.200  INFO 11080 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-12-30 13:47:42.247  WARN 11080 --- [restartedMain] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][restartedMain] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+2020-12-30 13:47:42.356  INFO 11080 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-12-30 13:47:42.412  INFO 11080 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-12-30 13:47:42.413  INFO 11080 --- [restartedMain] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+2020-12-30 13:47:42.673  INFO 11080 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-12-30 13:47:42.679  INFO 11080 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-12-30 13:47:42.934  INFO 11080 --- [restartedMain] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2020-12-30 13:47:42.940  INFO 11080 --- [restartedMain] com.wenyu.blog.BlogApplication           : Started BlogApplication in 2.905 seconds (JVM running for 3.617)
+2020-12-30 13:47:50.420  INFO 11080 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-12-30 13:47:50.421  INFO 11080 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-12-30 13:47:50.425  INFO 11080 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
+2020-12-30 13:47:56.088 DEBUG 11080 --- [http-nio-8080-exec-1] c.w.b.m.U.findByUsernameAndPassword      : ==>  Preparing: select * from t_user where username = ? and password = ?
+2020-12-30 13:47:56.102 DEBUG 11080 --- [http-nio-8080-exec-1] c.w.b.m.U.findByUsernameAndPassword      : ==> Parameters: admin(String), 96e79218965eb72c92a549dd5a330112(String)
+2020-12-30 13:47:56.110 DEBUG 11080 --- [http-nio-8080-exec-1] c.w.b.m.U.findByUsernameAndPassword      : <==      Total: 1
+2020-12-30 13:48:02.427 DEBUG 11080 --- [http-nio-8080-exec-1] c.w.blog.mapper.TypeMapper.selectByName  : ==>  Preparing: select * from t_type where name = ?
+2020-12-30 13:48:02.432 ERROR 11080 --- [http-nio-8080-exec-1] c.w.b.h.ControllerExceptionHandler       : Requst URL : http://localhost:8080/admin/types，Exception : {}
+
+org.mybatis.spring.MyBatisSystemException: nested exception is org.apache.ibatis.type.TypeException: Could not set parameters for mapping: ParameterMapping{property='name', mode=IN, javaType=class java.lang.Long, jdbcType=null, numericScale=null, resultMapId='null', jdbcTypeName='null', expression='null'}. Cause: org.apache.ibatis.type.TypeException: Error setting non null for parameter #1 with JdbcType null . Try setting a different JdbcType for this parameter or a different configuration property. Cause: java.lang.ClassCastException: java.lang.String cannot be cast to java.lang.Long
+	at org.mybatis.spring.MyBatisExceptionTranslator.translateExceptionIfPossible(MyBatisExceptionTranslator.java:92)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:440)
+	at com.sun.proxy.$Proxy72.selectOne(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.selectOne(SqlSessionTemplate.java:159)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:87)
+	at org.apache.ibatis.binding.MapperProxy$PlainMethodInvoker.invoke(MapperProxy.java:152)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:85)
+	at com.sun.proxy.$Proxy80.selectByName(Unknown Source)
+	at com.wenyu.blog.service.impl.TypeServiceImpl.selectByName(TypeServiceImpl.java:71)
+	at com.wenyu.blog.service.impl.TypeServiceImpl$$FastClassBySpringCGLIB$$a1919cf3.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:687)
+	at com.wenyu.blog.service.impl.TypeServiceImpl$$EnhancerBySpringCGLIB$$259f0d31.selectByName(<generated>)
+	at com.wenyu.blog.web.admin.TypeController.input(TypeController.java:47)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:105)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:878)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:792)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:652)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1590)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.apache.ibatis.type.TypeException: Could not set parameters for mapping: ParameterMapping{property='name', mode=IN, javaType=class java.lang.Long, jdbcType=null, numericScale=null, resultMapId='null', jdbcTypeName='null', expression='null'}. Cause: org.apache.ibatis.type.TypeException: Error setting non null for parameter #1 with JdbcType null . Try setting a different JdbcType for this parameter or a different configuration property. Cause: java.lang.ClassCastException: java.lang.String cannot be cast to java.lang.Long
+	at org.apache.ibatis.scripting.defaults.DefaultParameterHandler.setParameters(DefaultParameterHandler.java:89)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.parameterize(PreparedStatementHandler.java:94)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.parameterize(RoutingStatementHandler.java:64)
+	at org.apache.ibatis.executor.SimpleExecutor.prepareStatement(SimpleExecutor.java:88)
+	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:62)
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:325)
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:156)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:109)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:89)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:147)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:140)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectOne(DefaultSqlSession.java:76)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:426)
+	... 62 common frames omitted
+Caused by: org.apache.ibatis.type.TypeException: Error setting non null for parameter #1 with JdbcType null . Try setting a different JdbcType for this parameter or a different configuration property. Cause: java.lang.ClassCastException: java.lang.String cannot be cast to java.lang.Long
+	at org.apache.ibatis.type.BaseTypeHandler.setParameter(BaseTypeHandler.java:75)
+	at org.apache.ibatis.scripting.defaults.DefaultParameterHandler.setParameters(DefaultParameterHandler.java:87)
+	... 78 common frames omitted
+Caused by: java.lang.ClassCastException: java.lang.String cannot be cast to java.lang.Long
+	at org.apache.ibatis.type.LongTypeHandler.setNonNullParameter(LongTypeHandler.java:26)
+	at org.apache.ibatis.type.BaseTypeHandler.setParameter(BaseTypeHandler.java:73)
+	... 79 common frames omitted
+
+2020-12-30 13:48:02.433  WARN 11080 --- [http-nio-8080-exec-1] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.mybatis.spring.MyBatisSystemException: nested exception is org.apache.ibatis.type.TypeException: Could not set parameters for mapping: ParameterMapping{property='name', mode=IN, javaType=class java.lang.Long, jdbcType=null, numericScale=null, resultMapId='null', jdbcTypeName='null', expression='null'}. Cause: org.apache.ibatis.type.TypeException: Error setting non null for parameter #1 with JdbcType null . Try setting a different JdbcType for this parameter or a different configuration property. Cause: java.lang.ClassCastException: java.lang.String cannot be cast to java.lang.Long]
+2020-12-30 13:50:50.900  INFO 8136 --- [restartedMain] com.wenyu.blog.BlogApplication           : Starting BlogApplication on lt41137t480 with PID 8136 (E:\blog\blog\target\classes started by Administrator in E:\blog\blog)
+2020-12-30 13:50:50.903 DEBUG 8136 --- [restartedMain] com.wenyu.blog.BlogApplication           : Running with Spring Boot v2.3.5.RELEASE, Spring v5.2.10.RELEASE
+2020-12-30 13:50:50.903  INFO 8136 --- [restartedMain] com.wenyu.blog.BlogApplication           : No active profile set, falling back to default profiles: default
+2020-12-30 13:50:50.946  INFO 8136 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-12-30 13:50:50.947  INFO 8136 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-12-30 13:50:51.566  INFO 8136 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-12-30 13:50:51.621  INFO 8136 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 37ms. Found 1 JPA repository interfaces.
+2020-12-30 13:50:52.053  INFO 8136 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-12-30 13:50:52.063  INFO 8136 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-12-30 13:50:52.063  INFO 8136 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.39]
+2020-12-30 13:50:52.164  INFO 8136 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-12-30 13:50:52.165  INFO 8136 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1218 ms
+2020-12-30 13:50:52.291  INFO 8136 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-12-30 13:50:52.542  INFO 8136 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-12-30 13:50:52.578  INFO 8136 --- [task-1] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.22.Final
+2020-12-30 13:50:52.673  INFO 8136 --- [task-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-12-30 13:50:52.748  INFO 8136 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-12-30 13:50:52.766  WARN 8136 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-12-30 13:50:52.887  INFO 8136 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-12-30 13:50:52.903  INFO 8136 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2020-12-30 13:50:52.905  INFO 8136 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-12-30 13:50:52.949  WARN 8136 --- [restartedMain] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][restartedMain] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+2020-12-30 13:50:53.056  INFO 8136 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-12-30 13:50:53.112  INFO 8136 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-12-30 13:50:53.113  INFO 8136 --- [restartedMain] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+2020-12-30 13:50:53.376  INFO 8136 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-12-30 13:50:53.382  INFO 8136 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-12-30 13:50:53.623  INFO 8136 --- [restartedMain] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2020-12-30 13:50:53.631  INFO 8136 --- [restartedMain] com.wenyu.blog.BlogApplication           : Started BlogApplication in 3.1 seconds (JVM running for 3.768)
+2020-12-30 13:50:59.141  INFO 8136 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-12-30 13:50:59.141  INFO 8136 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-12-30 13:50:59.147  INFO 8136 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 6 ms
+2020-12-30 13:51:04.235 DEBUG 8136 --- [http-nio-8080-exec-7] c.w.b.m.U.findByUsernameAndPassword      : ==>  Preparing: select * from t_user where username = ? and password = ?
+2020-12-30 13:51:04.249 DEBUG 8136 --- [http-nio-8080-exec-7] c.w.b.m.U.findByUsernameAndPassword      : ==> Parameters: admin(String), 96e79218965eb72c92a549dd5a330112(String)
+2020-12-30 13:51:04.257 DEBUG 8136 --- [http-nio-8080-exec-7] c.w.b.m.U.findByUsernameAndPassword      : <==      Total: 1
+2020-12-30 14:16:29.730  INFO 9824 --- [restartedMain] com.wenyu.blog.BlogApplication           : Starting BlogApplication on lt41137t480 with PID 9824 (E:\blog\blog\target\classes started by Administrator in E:\blog\blog)
+2020-12-30 14:16:29.733 DEBUG 9824 --- [restartedMain] com.wenyu.blog.BlogApplication           : Running with Spring Boot v2.3.5.RELEASE, Spring v5.2.10.RELEASE
+2020-12-30 14:16:29.734  INFO 9824 --- [restartedMain] com.wenyu.blog.BlogApplication           : No active profile set, falling back to default profiles: default
+2020-12-30 14:16:29.778  INFO 9824 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-12-30 14:16:29.778  INFO 9824 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-12-30 14:16:30.318  INFO 9824 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-12-30 14:16:30.365  INFO 9824 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 39ms. Found 1 JPA repository interfaces.
+2020-12-30 14:16:30.854  INFO 9824 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-12-30 14:16:30.861  INFO 9824 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-12-30 14:16:30.862  INFO 9824 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.39]
+2020-12-30 14:16:30.931  INFO 9824 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-12-30 14:16:30.931  INFO 9824 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1152 ms
+2020-12-30 14:16:31.029  INFO 9824 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-12-30 14:16:31.115  INFO 9824 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-12-30 14:16:31.151  INFO 9824 --- [task-1] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.22.Final
+2020-12-30 14:16:31.244  INFO 9824 --- [task-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-12-30 14:16:31.317  INFO 9824 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-12-30 14:16:31.343  WARN 9824 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-12-30 14:16:31.458  INFO 9824 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-12-30 14:16:31.472  INFO 9824 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2020-12-30 14:16:31.482  INFO 9824 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-12-30 14:16:31.526  WARN 9824 --- [restartedMain] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][restartedMain] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+2020-12-30 14:16:31.635  INFO 9824 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-12-30 14:16:31.688  INFO 9824 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-12-30 14:16:31.690  INFO 9824 --- [restartedMain] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+2020-12-30 14:16:31.934  INFO 9824 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-12-30 14:16:31.940  INFO 9824 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-12-30 14:16:32.182  INFO 9824 --- [restartedMain] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2020-12-30 14:16:32.188  INFO 9824 --- [restartedMain] com.wenyu.blog.BlogApplication           : Started BlogApplication in 2.812 seconds (JVM running for 3.506)
+2020-12-30 14:16:36.119  INFO 9824 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-12-30 14:16:36.120  INFO 9824 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-12-30 14:16:36.125  INFO 9824 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms
+2020-12-30 14:16:41.279 DEBUG 9824 --- [http-nio-8080-exec-7] c.w.b.m.U.findByUsernameAndPassword      : ==>  Preparing: select * from t_user where username = ? and password = ?
+2020-12-30 14:16:41.293 DEBUG 9824 --- [http-nio-8080-exec-7] c.w.b.m.U.findByUsernameAndPassword      : ==> Parameters: admin(String), 96e79218965eb72c92a549dd5a330112(String)
+2020-12-30 14:16:41.300 DEBUG 9824 --- [http-nio-8080-exec-7] c.w.b.m.U.findByUsernameAndPassword      : <==      Total: 1
+2020-12-30 14:16:48.303 DEBUG 9824 --- [http-nio-8080-exec-2] c.w.blog.mapper.TypeMapper.selectByName  : ==>  Preparing: select * from t_type where name = ?
+2020-12-30 14:16:48.307 ERROR 9824 --- [http-nio-8080-exec-2] c.w.b.h.ControllerExceptionHandler       : Requst URL : http://localhost:8080/admin/types，Exception : {}
+
+org.mybatis.spring.MyBatisSystemException: nested exception is org.apache.ibatis.type.TypeException: Could not set parameters for mapping: ParameterMapping{property='name', mode=IN, javaType=class java.lang.Long, jdbcType=null, numericScale=null, resultMapId='null', jdbcTypeName='null', expression='null'}. Cause: org.apache.ibatis.type.TypeException: Error setting non null for parameter #1 with JdbcType null . Try setting a different JdbcType for this parameter or a different configuration property. Cause: java.lang.ClassCastException: java.lang.String cannot be cast to java.lang.Long
+	at org.mybatis.spring.MyBatisExceptionTranslator.translateExceptionIfPossible(MyBatisExceptionTranslator.java:92)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:440)
+	at com.sun.proxy.$Proxy72.selectOne(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.selectOne(SqlSessionTemplate.java:159)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:87)
+	at org.apache.ibatis.binding.MapperProxy$PlainMethodInvoker.invoke(MapperProxy.java:152)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:85)
+	at com.sun.proxy.$Proxy80.selectByName(Unknown Source)
+	at com.wenyu.blog.service.impl.TypeServiceImpl.selectByName(TypeServiceImpl.java:71)
+	at com.wenyu.blog.service.impl.TypeServiceImpl$$FastClassBySpringCGLIB$$a1919cf3.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:687)
+	at com.wenyu.blog.service.impl.TypeServiceImpl$$EnhancerBySpringCGLIB$$b5ba0ff.selectByName(<generated>)
+	at com.wenyu.blog.web.admin.TypeController.input(TypeController.java:47)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:105)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:878)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:792)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:652)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1590)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.apache.ibatis.type.TypeException: Could not set parameters for mapping: ParameterMapping{property='name', mode=IN, javaType=class java.lang.Long, jdbcType=null, numericScale=null, resultMapId='null', jdbcTypeName='null', expression='null'}. Cause: org.apache.ibatis.type.TypeException: Error setting non null for parameter #1 with JdbcType null . Try setting a different JdbcType for this parameter or a different configuration property. Cause: java.lang.ClassCastException: java.lang.String cannot be cast to java.lang.Long
+	at org.apache.ibatis.scripting.defaults.DefaultParameterHandler.setParameters(DefaultParameterHandler.java:89)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.parameterize(PreparedStatementHandler.java:94)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.parameterize(RoutingStatementHandler.java:64)
+	at org.apache.ibatis.executor.SimpleExecutor.prepareStatement(SimpleExecutor.java:88)
+	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:62)
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:325)
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:156)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:109)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:89)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:147)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:140)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectOne(DefaultSqlSession.java:76)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:426)
+	... 62 common frames omitted
+Caused by: org.apache.ibatis.type.TypeException: Error setting non null for parameter #1 with JdbcType null . Try setting a different JdbcType for this parameter or a different configuration property. Cause: java.lang.ClassCastException: java.lang.String cannot be cast to java.lang.Long
+	at org.apache.ibatis.type.BaseTypeHandler.setParameter(BaseTypeHandler.java:75)
+	at org.apache.ibatis.scripting.defaults.DefaultParameterHandler.setParameters(DefaultParameterHandler.java:87)
+	... 78 common frames omitted
+Caused by: java.lang.ClassCastException: java.lang.String cannot be cast to java.lang.Long
+	at org.apache.ibatis.type.LongTypeHandler.setNonNullParameter(LongTypeHandler.java:26)
+	at org.apache.ibatis.type.BaseTypeHandler.setParameter(BaseTypeHandler.java:73)
+	... 79 common frames omitted
+
+2020-12-30 14:16:48.308  WARN 9824 --- [http-nio-8080-exec-2] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.mybatis.spring.MyBatisSystemException: nested exception is org.apache.ibatis.type.TypeException: Could not set parameters for mapping: ParameterMapping{property='name', mode=IN, javaType=class java.lang.Long, jdbcType=null, numericScale=null, resultMapId='null', jdbcTypeName='null', expression='null'}. Cause: org.apache.ibatis.type.TypeException: Error setting non null for parameter #1 with JdbcType null . Try setting a different JdbcType for this parameter or a different configuration property. Cause: java.lang.ClassCastException: java.lang.String cannot be cast to java.lang.Long]
+2020-12-30 14:18:53.352  INFO 9824 --- [Thread-10] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-12-30 14:18:53.354  INFO 9824 --- [Thread-10] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-12-30 14:18:53.355  INFO 9824 --- [Thread-10] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-12-30 14:18:53.357  INFO 9824 --- [Thread-10] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-12-30 14:18:53.585  INFO 9824 --- [restartedMain] com.wenyu.blog.BlogApplication           : Starting BlogApplication on lt41137t480 with PID 9824 (E:\blog\blog\target\classes started by Administrator in E:\blog\blog)
+2020-12-30 14:18:53.585 DEBUG 9824 --- [restartedMain] com.wenyu.blog.BlogApplication           : Running with Spring Boot v2.3.5.RELEASE, Spring v5.2.10.RELEASE
+2020-12-30 14:18:53.585  INFO 9824 --- [restartedMain] com.wenyu.blog.BlogApplication           : No active profile set, falling back to default profiles: default
+2020-12-30 14:18:53.725  INFO 9824 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-12-30 14:18:53.733  INFO 9824 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 8ms. Found 1 JPA repository interfaces.
+2020-12-30 14:18:53.815  INFO 9824 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-12-30 14:18:53.815  INFO 9824 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-12-30 14:18:53.816  INFO 9824 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.39]
+2020-12-30 14:18:53.827  INFO 9824 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-12-30 14:18:53.828  INFO 9824 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 240 ms
+2020-12-30 14:18:53.860  INFO 9824 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-12-30 14:18:53.864  INFO 9824 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-12-30 14:18:53.869  INFO 9824 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2020-12-30 14:18:53.872  INFO 9824 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2020-12-30 14:18:53.872  INFO 9824 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2020-12-30 14:18:53.897  INFO 9824 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-12-30 14:18:53.897  INFO 9824 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-12-30 14:18:53.910  INFO 9824 --- [task-2] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-12-30 14:18:53.917  WARN 9824 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-12-30 14:18:53.956  INFO 9824 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-12-30 14:18:53.971  WARN 9824 --- [restartedMain] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][restartedMain] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+2020-12-30 14:18:54.061  INFO 9824 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-12-30 14:18:54.062  INFO 9824 --- [restartedMain] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+2020-12-30 14:18:54.085  INFO 9824 --- [restartedMain] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2020-12-30 14:18:54.088  INFO 9824 --- [restartedMain] com.wenyu.blog.BlogApplication           : Started BlogApplication in 0.53 seconds (JVM running for 145.391)
+2020-12-30 14:18:54.089  INFO 9824 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2020-12-30 14:19:31.665  INFO 8064 --- [restartedMain] com.wenyu.blog.BlogApplication           : Starting BlogApplication on lt41137t480 with PID 8064 (E:\blog\blog\target\classes started by Administrator in E:\blog\blog)
+2020-12-30 14:19:31.665 DEBUG 8064 --- [restartedMain] com.wenyu.blog.BlogApplication           : Running with Spring Boot v2.3.5.RELEASE, Spring v5.2.10.RELEASE
+2020-12-30 14:19:31.665  INFO 8064 --- [restartedMain] com.wenyu.blog.BlogApplication           : No active profile set, falling back to default profiles: default
+2020-12-30 14:19:31.711  INFO 8064 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-12-30 14:19:31.711  INFO 8064 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-12-30 14:19:32.288  INFO 8064 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-12-30 14:19:32.337  INFO 8064 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 42ms. Found 1 JPA repository interfaces.
+2020-12-30 14:19:32.788  INFO 8064 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-12-30 14:19:32.795  INFO 8064 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-12-30 14:19:32.795  INFO 8064 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.39]
+2020-12-30 14:19:32.871  INFO 8064 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-12-30 14:19:32.871  INFO 8064 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1160 ms
+2020-12-30 14:19:32.983  INFO 8064 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-12-30 14:19:33.106  INFO 8064 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-12-30 14:19:33.148  INFO 8064 --- [task-1] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.22.Final
+2020-12-30 14:19:33.267  INFO 8064 --- [task-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-12-30 14:19:33.366  INFO 8064 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-12-30 14:19:33.381  WARN 8064 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-12-30 14:19:33.536  INFO 8064 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-12-30 14:19:33.551  INFO 8064 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2020-12-30 14:19:33.551  INFO 8064 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-12-30 14:19:33.597  WARN 8064 --- [restartedMain] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][restartedMain] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+2020-12-30 14:19:33.702  INFO 8064 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-12-30 14:19:33.759  INFO 8064 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-12-30 14:19:33.761  INFO 8064 --- [restartedMain] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+2020-12-30 14:19:34.019  INFO 8064 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-12-30 14:19:34.025  INFO 8064 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-12-30 14:19:34.262  INFO 8064 --- [restartedMain] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2020-12-30 14:19:34.268  INFO 8064 --- [restartedMain] com.wenyu.blog.BlogApplication           : Started BlogApplication in 2.968 seconds (JVM running for 3.686)
+2020-12-30 14:19:42.166  INFO 8064 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-12-30 14:19:42.166  INFO 8064 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-12-30 14:19:42.172  INFO 8064 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 6 ms
+2020-12-30 14:19:47.775 DEBUG 8064 --- [http-nio-8080-exec-2] c.w.b.m.U.findByUsernameAndPassword      : ==>  Preparing: select * from t_user where username = ? and password = ?
+2020-12-30 14:19:47.789 DEBUG 8064 --- [http-nio-8080-exec-2] c.w.b.m.U.findByUsernameAndPassword      : ==> Parameters: admin(String), 96e79218965eb72c92a549dd5a330112(String)
+2020-12-30 14:19:47.796 DEBUG 8064 --- [http-nio-8080-exec-2] c.w.b.m.U.findByUsernameAndPassword      : <==      Total: 1
+2020-12-30 14:19:56.238 DEBUG 8064 --- [http-nio-8080-exec-2] c.w.blog.mapper.TypeMapper.selectByName  : ==>  Preparing: select * from t_type where name = ?
+2020-12-30 14:19:56.238 DEBUG 8064 --- [http-nio-8080-exec-2] c.w.blog.mapper.TypeMapper.selectByName  : ==> Parameters: ppp(String)
+2020-12-30 14:19:56.239 DEBUG 8064 --- [http-nio-8080-exec-2] c.w.blog.mapper.TypeMapper.selectByName  : <==      Total: 0
+2020-12-30 14:20:05.752 DEBUG 8064 --- [http-nio-8080-exec-8] c.w.blog.mapper.TypeMapper.selectByName  : ==>  Preparing: select * from t_type where name = ?
+2020-12-30 14:20:05.752 DEBUG 8064 --- [http-nio-8080-exec-8] c.w.blog.mapper.TypeMapper.selectByName  : ==> Parameters: (String)
+2020-12-30 14:20:05.753 DEBUG 8064 --- [http-nio-8080-exec-8] c.w.blog.mapper.TypeMapper.selectByName  : <==      Total: 0
+2020-12-30 14:20:10.488 DEBUG 8064 --- [http-nio-8080-exec-8] c.w.blog.mapper.TypeMapper.selectByName  : ==>  Preparing: select * from t_type where name = ?
+2020-12-30 14:20:10.490 DEBUG 8064 --- [http-nio-8080-exec-8] c.w.blog.mapper.TypeMapper.selectByName  : ==> Parameters: java(String)
+2020-12-30 14:20:10.492 DEBUG 8064 --- [http-nio-8080-exec-8] c.w.blog.mapper.TypeMapper.selectByName  : <==      Total: 1
+2020-12-30 14:20:42.679  INFO 8900 --- [restartedMain] com.wenyu.blog.BlogApplication           : Starting BlogApplication on lt41137t480 with PID 8900 (E:\blog\blog\target\classes started by Administrator in E:\blog\blog)
+2020-12-30 14:20:42.683 DEBUG 8900 --- [restartedMain] com.wenyu.blog.BlogApplication           : Running with Spring Boot v2.3.5.RELEASE, Spring v5.2.10.RELEASE
+2020-12-30 14:20:42.683  INFO 8900 --- [restartedMain] com.wenyu.blog.BlogApplication           : No active profile set, falling back to default profiles: default
+2020-12-30 14:20:42.733  INFO 8900 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-12-30 14:20:42.733  INFO 8900 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-12-30 14:20:43.379  INFO 8900 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-12-30 14:20:43.421  INFO 8900 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 35ms. Found 1 JPA repository interfaces.
+2020-12-30 14:20:43.851  INFO 8900 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-12-30 14:20:43.859  INFO 8900 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-12-30 14:20:43.859  INFO 8900 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.39]
+2020-12-30 14:20:43.935  INFO 8900 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-12-30 14:20:43.935  INFO 8900 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1202 ms
+2020-12-30 14:20:44.054  INFO 8900 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-12-30 14:20:44.162  INFO 8900 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-12-30 14:20:44.206  INFO 8900 --- [task-1] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.22.Final
+2020-12-30 14:20:44.316  INFO 8900 --- [task-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-12-30 14:20:44.391  INFO 8900 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-12-30 14:20:44.408  WARN 8900 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-12-30 14:20:44.540  INFO 8900 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-12-30 14:20:44.553  INFO 8900 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-12-30 14:20:44.558  INFO 8900 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2020-12-30 14:20:44.601  WARN 8900 --- [restartedMain] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][restartedMain] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+2020-12-30 14:20:44.698  INFO 8900 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-12-30 14:20:44.750  INFO 8900 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-12-30 14:20:44.752  INFO 8900 --- [restartedMain] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+2020-12-30 14:20:45.019  INFO 8900 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-12-30 14:20:45.024  INFO 8900 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-12-30 14:20:45.267  INFO 8900 --- [restartedMain] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2020-12-30 14:20:45.274  INFO 8900 --- [restartedMain] com.wenyu.blog.BlogApplication           : Started BlogApplication in 2.979 seconds (JVM running for 3.658)
+2020-12-30 14:20:49.347  INFO 8900 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-12-30 14:20:49.347  INFO 8900 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-12-30 14:20:49.352  INFO 8900 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms
+2020-12-30 14:20:55.270 DEBUG 8900 --- [http-nio-8080-exec-2] c.w.b.m.U.findByUsernameAndPassword      : ==>  Preparing: select * from t_user where username = ? and password = ?
+2020-12-30 14:20:55.284 DEBUG 8900 --- [http-nio-8080-exec-2] c.w.b.m.U.findByUsernameAndPassword      : ==> Parameters: admin(String), 96e79218965eb72c92a549dd5a330112(String)
+2020-12-30 14:20:55.292 DEBUG 8900 --- [http-nio-8080-exec-2] c.w.b.m.U.findByUsernameAndPassword      : <==      Total: 1
+2020-12-30 14:21:04.807 DEBUG 8900 --- [http-nio-8080-exec-2] c.w.blog.mapper.TypeMapper.selectByName  : ==>  Preparing: select * from t_type where name = ?
+2020-12-30 14:21:04.807 DEBUG 8900 --- [http-nio-8080-exec-2] c.w.blog.mapper.TypeMapper.selectByName  : ==> Parameters: java(String)
+2020-12-30 14:21:04.808 DEBUG 8900 --- [http-nio-8080-exec-2] c.w.blog.mapper.TypeMapper.selectByName  : <==      Total: 2
+2020-12-30 14:21:04.812 ERROR 8900 --- [http-nio-8080-exec-2] c.w.b.h.ControllerExceptionHandler       : Requst URL : http://localhost:8080/admin/types，Exception : {}
+
+org.mybatis.spring.MyBatisSystemException: nested exception is org.apache.ibatis.exceptions.TooManyResultsException: Expected one result (or null) to be returned by selectOne(), but found: 2
+	at org.mybatis.spring.MyBatisExceptionTranslator.translateExceptionIfPossible(MyBatisExceptionTranslator.java:92)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:440)
+	at com.sun.proxy.$Proxy72.selectOne(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.selectOne(SqlSessionTemplate.java:159)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:87)
+	at org.apache.ibatis.binding.MapperProxy$PlainMethodInvoker.invoke(MapperProxy.java:152)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:85)
+	at com.sun.proxy.$Proxy80.selectByName(Unknown Source)
+	at com.wenyu.blog.service.impl.TypeServiceImpl.selectByName(TypeServiceImpl.java:71)
+	at com.wenyu.blog.service.impl.TypeServiceImpl$$FastClassBySpringCGLIB$$a1919cf3.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:687)
+	at com.wenyu.blog.service.impl.TypeServiceImpl$$EnhancerBySpringCGLIB$$38cb5a96.selectByName(<generated>)
+	at com.wenyu.blog.web.admin.TypeController.input(TypeController.java:47)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:105)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:878)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:792)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:652)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1590)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.apache.ibatis.exceptions.TooManyResultsException: Expected one result (or null) to be returned by selectOne(), but found: 2
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectOne(DefaultSqlSession.java:80)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:426)
+	... 62 common frames omitted
+
+2020-12-30 14:21:04.812  WARN 8900 --- [http-nio-8080-exec-2] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.mybatis.spring.MyBatisSystemException: nested exception is org.apache.ibatis.exceptions.TooManyResultsException: Expected one result (or null) to be returned by selectOne(), but found: 2]
+2020-12-30 14:22:43.502  INFO 10032 --- [restartedMain] com.wenyu.blog.BlogApplication           : Starting BlogApplication on lt41137t480 with PID 10032 (E:\blog\blog\target\classes started by Administrator in E:\blog\blog)
+2020-12-30 14:22:43.504 DEBUG 10032 --- [restartedMain] com.wenyu.blog.BlogApplication           : Running with Spring Boot v2.3.5.RELEASE, Spring v5.2.10.RELEASE
+2020-12-30 14:22:43.504  INFO 10032 --- [restartedMain] com.wenyu.blog.BlogApplication           : No active profile set, falling back to default profiles: default
+2020-12-30 14:22:43.549  INFO 10032 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-12-30 14:22:43.549  INFO 10032 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-12-30 14:22:44.119  INFO 10032 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-12-30 14:22:44.164  INFO 10032 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 39ms. Found 1 JPA repository interfaces.
+2020-12-30 14:22:44.650  INFO 10032 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-12-30 14:22:44.658  INFO 10032 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-12-30 14:22:44.658  INFO 10032 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.39]
+2020-12-30 14:22:44.728  INFO 10032 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-12-30 14:22:44.729  INFO 10032 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1178 ms
+2020-12-30 14:22:44.821  INFO 10032 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-12-30 14:22:44.909  INFO 10032 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-12-30 14:22:44.946  INFO 10032 --- [task-1] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.22.Final
+2020-12-30 14:22:45.038  INFO 10032 --- [task-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-12-30 14:22:45.112  INFO 10032 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-12-30 14:22:45.130  WARN 10032 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-12-30 14:22:45.259  INFO 10032 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-12-30 14:22:45.273  INFO 10032 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-12-30 14:22:45.275  INFO 10032 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2020-12-30 14:22:45.320  WARN 10032 --- [restartedMain] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][restartedMain] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+2020-12-30 14:22:45.422  INFO 10032 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-12-30 14:22:45.479  INFO 10032 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-12-30 14:22:45.480  INFO 10032 --- [restartedMain] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+2020-12-30 14:22:45.738  INFO 10032 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-12-30 14:22:45.744  INFO 10032 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-12-30 14:22:45.981  INFO 10032 --- [restartedMain] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2020-12-30 14:22:45.988  INFO 10032 --- [restartedMain] com.wenyu.blog.BlogApplication           : Started BlogApplication in 2.83 seconds (JVM running for 3.623)
+2020-12-30 14:22:56.907  INFO 10032 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-12-30 14:22:56.908  INFO 10032 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-12-30 14:22:56.913  INFO 10032 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms
+2020-12-30 14:23:02.262 DEBUG 10032 --- [http-nio-8080-exec-5] c.w.b.m.U.findByUsernameAndPassword      : ==>  Preparing: select * from t_user where username = ? and password = ?
+2020-12-30 14:23:02.276 DEBUG 10032 --- [http-nio-8080-exec-5] c.w.b.m.U.findByUsernameAndPassword      : ==> Parameters: admin(String), 96e79218965eb72c92a549dd5a330112(String)
+2020-12-30 14:23:02.283 DEBUG 10032 --- [http-nio-8080-exec-5] c.w.b.m.U.findByUsernameAndPassword      : <==      Total: 1
+2020-12-30 14:23:09.681 DEBUG 10032 --- [http-nio-8080-exec-4] c.w.blog.mapper.TypeMapper.selectByName  : ==>  Preparing: select * from t_type where name = ?
+2020-12-30 14:23:09.681 DEBUG 10032 --- [http-nio-8080-exec-4] c.w.blog.mapper.TypeMapper.selectByName  : ==> Parameters: java(String)
+2020-12-30 14:23:09.682 DEBUG 10032 --- [http-nio-8080-exec-4] c.w.blog.mapper.TypeMapper.selectByName  : <==      Total: 1
+2020-12-30 14:23:16.823 DEBUG 10032 --- [http-nio-8080-exec-4] c.w.blog.mapper.TypeMapper.selectByName  : ==>  Preparing: select * from t_type where name = ?
+2020-12-30 14:23:16.824 DEBUG 10032 --- [http-nio-8080-exec-4] c.w.blog.mapper.TypeMapper.selectByName  : ==> Parameters: css(String)
+2020-12-30 14:23:16.825 DEBUG 10032 --- [http-nio-8080-exec-4] c.w.blog.mapper.TypeMapper.selectByName  : <==      Total: 1
+2020-12-30 14:23:24.735 DEBUG 10032 --- [http-nio-8080-exec-4] c.w.blog.mapper.TypeMapper.selectByName  : ==>  Preparing: select * from t_type where name = ?
+2020-12-30 14:23:24.735 DEBUG 10032 --- [http-nio-8080-exec-4] c.w.blog.mapper.TypeMapper.selectByName  : ==> Parameters: php(String)
+2020-12-30 14:23:24.736 DEBUG 10032 --- [http-nio-8080-exec-4] c.w.blog.mapper.TypeMapper.selectByName  : <==      Total: 0

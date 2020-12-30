@@ -3,7 +3,6 @@ package com.wenyu.blog.web.admin;
 
 import com.wenyu.blog.model.Type;
 import com.wenyu.blog.service.TypeService;
-import org.springframework.boot.context.properties.bind.BindResult;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.data.web.PageableDefault;
@@ -45,10 +44,15 @@ public class TypeController {
     @PostMapping("types")
     //@Valid 需要校验的类
     public String input(@Valid Type type, BindingResult result, RedirectAttributes attributes){
+        Type type1 = typeService.selectByName(type.getName());
+        if(type1 != null){
+            //说明有这个类型
+            result.rejectValue("name","nameError","不能添加重复的分类");
+            //attributes.addFlashAttribute("message", "已经有这个分类");
+        }
         if(result.hasErrors()){
             return "admin/type-input";
         }
-
        Type t = typeService.saveType(type);
        if( t== null){
            //表示添加失败

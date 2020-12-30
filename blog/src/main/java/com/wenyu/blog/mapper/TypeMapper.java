@@ -20,4 +20,6 @@ public interface TypeMapper {
     Type saveType(Type type);
 
     Type selectById(long id);
+
+    Type selectByName(String name);
 }
