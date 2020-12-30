@@ -70,4 +70,9 @@ public class TypeServiceImpl implements TypeService {
     public Type selectByName(String name) {
         return typeMapper.selectByName(name);
     }
+
+    @Override
+    public Type selectByPrimaryKey(Long id) {
+        return typeMapper.selectByPrimaryKey(id);
+    }
 }

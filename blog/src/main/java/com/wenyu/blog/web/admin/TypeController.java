@@ -10,6 +10,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
@@ -62,6 +63,15 @@ public class TypeController {
            attributes.addFlashAttribute("message", "操作成功");
        }
         return "redirect:/admin/types";
+    }
+
+//    @PathVariable保证上下id一致
+        @GetMapping("/types/{id}/input")
+    public String editInput(@PathVariable Long id, Model model) {
+        //先获取编辑的那个分类名称
+            String name = typeService.selectByPrimaryKey(id).getName();
+        model.addAttribute("type", name);
+        return "admin/type-input";
     }
 
 }

@@ -12,7 +12,6 @@ import java.util.List;
  * 2020/12/28
  */
 public interface TypeRepository extends JpaRepository<Type,Long> {
-    Type findByName(String name);
 
 
     @Query("select t from Type t")

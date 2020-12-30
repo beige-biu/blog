@@ -23,4 +23,6 @@ public interface TypeService {
     void  deleteType(Long id);
 
     Type selectByName(String name);
+
+    Type selectByPrimaryKey(Long id);
 }
