@@ -15,7 +15,9 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
+
 import javax.annotation.Resource;
+import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
 
 /**
@@ -49,7 +51,7 @@ public class TypeController {
         if(type1 != null){
             //说明有这个类型
             result.rejectValue("name","nameError","不能添加重复的分类");
-            //attributes.addFlashAttribute("message", "已经有这个分类");
+
         }
         if(result.hasErrors()){
             return "admin/type-input";
@@ -66,12 +68,11 @@ public class TypeController {
     }
 
 //    @PathVariable保证上下id一致
-        @GetMapping("/types/{id}/input")
+        @RequestMapping("/update/{id}")
     public String editInput(@PathVariable Long id, Model model) {
         //先获取编辑的那个分类名称
-            String name = typeService.selectByPrimaryKey(id).getName();
-        model.addAttribute("type", name);
-        return "admin/type-input";
+        model.addAttribute("type", typeService.selectByPrimaryKey(id));
+        return "admin/editType";
     }
 
 }
