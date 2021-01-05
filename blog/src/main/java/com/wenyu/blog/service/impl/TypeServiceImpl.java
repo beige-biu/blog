@@ -57,7 +57,7 @@ public class TypeServiceImpl implements TypeService {
             throw new NotFoundException("不存在该类型");
         }
         BeanUtils.copyProperties(type, t);
-        return typeMapper.saveType(t);
+        return typeRepository.save(t);
     }
 
     @Transactional
