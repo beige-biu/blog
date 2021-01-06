@@ -1,8 +1,15 @@
 package com.wenyu.blog.model;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Table;
 import java.util.Date;
-
+@Entity
+@Table(name = "t_blog")
 public class Blog {
+    @Id
+    @GeneratedValue
     private Long id;
 
     private Boolean appreciation;
@@ -161,5 +168,31 @@ public class Blog {
 
     public void setContent(String content) {
         this.content = content;
+    }
+
+    public boolean isRecommend() {
+        return recommend;
+    }
+
+    @Override
+    public String toString() {
+        return "Blog{" +
+                "id=" + id +
+                ", appreciation=" + appreciation +
+                ", commentabled=" + commentabled +
+                ", createTime=" + createTime +
+                ", description='" + description + '\'' +
+                ", firstPicture='" + firstPicture + '\'' +
+                ", flag='" + flag + '\'' +
+                ", published=" + published +
+                ", recommend=" + recommend +
+                ", shareStatement=" + shareStatement +
+                ", title='" + title + '\'' +
+                ", updateTime=" + updateTime +
+                ", views=" + views +
+                ", typeId=" + typeId +
+                ", userId=" + userId +
+                ", content='" + content + '\'' +
+                '}';
     }
 }

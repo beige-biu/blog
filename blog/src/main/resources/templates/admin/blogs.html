@@ -85,7 +85,7 @@
             </div>
         </form>
 
-        <table class="ui celled table">
+        <table class="ui compact teal table">
             <thead>
             <tr>
                 <th></th>
@@ -97,26 +97,26 @@
             </tr>
             </thead>
             <tbody>
-            <tr>
-                <td>1</td>
-                <td>java入门</td>
-                <td>java</td>
-                <td>是</td>
-                <td>2020-03-02</td>
+            <tr th:each="blog,iterStat : ${page.content}">
+                <td th:text="${iterStat.count}">1</td>
+                <td th:text="${blog.title}">java入门</td>
+                <td th:text="${blog.type.name}">java</td>
+                <td th:text="${blog.recommend ? '是':'否'}">是</td>
+                <td th:text="${blog.updateTime}">2020-03-02</td>
                 <td>
-                    <a href="#" class="ui teal basic button">编辑</a>
-                    <a href="#" class="ui red basic button">删除</a>
+                    <a href="#" th:href="@{/admin/blogs/{id}/input(id=${blog.id})}" class="ui teal basic button">编辑</a>
+                    <a href="#" th:href="@{/admin/blogs/{id}/delete(id=${blog.id})}" class="ui red basic button">删除</a>
                 </td>
             </tr>
             </tbody>
             <tfoot>
                 <tr>
                     <th colspan="6">
-                        <div class="ui mini pagination menu">
-                            <a  class="item">上一页</a>
-                            <a  class="item">下一页</a>
+                        <div class="ui mini pagination menu" th:if="${page.totalPages}>1">
+                            <a th:href="@{/admin/blogs(page=${page.number}-1)}"  class="item" th:unless="${page.first}">上一页</a>
+                            <a th:href="@{/admin/blogs(page=${page.number}+1)}"  class="item" th:unless="${page.last}">下一页</a>
                         </div>
-                        <a href="#" class=" ui teal right floated button">新增</a>
+                        <a href="#" th:href="@{/admin/blogs/input}" class=" ui teal right floated button">新增</a>
                     </th>
                 </tr>
 
