@@ -68,8 +68,7 @@ public class TypeController {
     }
 
 //    @PathVariable保证上下id一致
-
-        @RequestMapping("/types/{id}/update")
+        @RequestMapping("/types/{id}/input")
     public String editInput(@PathVariable Long id, Model model) {
         //先获取编辑的那个分类名称
         model.addAttribute("type", typeService.selectByPrimaryKey(id));

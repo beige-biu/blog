@@ -1,8 +1,19 @@
 package com.wenyu.blog.model;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Table;
+import javax.validation.constraints.NotBlank;
+
+@Entity
+@Table(name = "t_tag")
 public class Tag {
+    @Id
+    @GeneratedValue
     private Long id;
 
+    @NotBlank(message = "标签名称不能为空") //后端验证
     private String name;
 
     public Long getId() {

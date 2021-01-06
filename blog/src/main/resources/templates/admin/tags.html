@@ -3,7 +3,7 @@
 <head th:replace="admin/_fragments :: head(~{::title})">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>分类管理</title>
+    <title>标签管理</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/semantic-ui/2.2.4/semantic.min.css">
     <link rel="stylesheet" href="../../static/css/me.css">
 </head>
@@ -11,7 +11,7 @@
 <!--导航开始-->
 
 
-<nav th:replace="admin/_fragments :: menu(2)" class="ui inverted attached segment">
+<nav th:replace="admin/_fragments :: menu(3)" class="ui inverted attached segment">
     <div class="ui container">
         <div class="ui inverted secondary menu">
             <div class="ui teal header item">
@@ -70,13 +70,13 @@
             </tr>
             </thead>
             <tbody>
-            <tr th:each="type,iterStat : ${page.content}">
+            <tr th:each="tag,iterStat : ${page.content}">
                 <td th:text="${iterStat.count}">1</td>
-                <td th:text="${type.name}">java入门</td>
+                <td th:text="${tag.name}">java入门</td>
                 <td>
 <!--                    <a href="#" th:href="@{/admin/types/{id}/input(id=${type.id})}" class="ui teal basic button">编辑</a>-->
-                    <a href="#" th:href="@{/admin/types/{id}/input(id=${type.id})}" class="ui teal basic button">编辑</a>
-                    <a href="#" th:href="@{/admin/types/{id}/delete(id=${type.id})}" class="ui red basic button">删除</a>
+                    <a href="#" th:href="@{/admin/tags/{id}/input(id=${tag.id})}" class="ui teal basic button">编辑</a>
+                    <a href="#" th:href="@{/admin/tags/{id}/delete(id=${tag.id})}" class="ui red basic button">删除</a>
                 </td>
             </tr>
             </tbody>
@@ -84,10 +84,10 @@
                 <tr>
                     <th colspan="6" >
                         <div class="ui mini pagination menu" th:if="${page.totalPages}>1">
-                            <a th:href="@{/admin/types(page=${page.number}-1)}"  class="item" th:unless="${page.first}">上一页</a>
-                            <a th:href="@{/admin/types(page=${page.number}+1)}"  class="item" th:unless="${page.last}">下一页</a>
+                            <a th:href="@{/admin/tags(page=${page.number}-1)}"  class="item" th:unless="${page.first}">上一页</a>
+                            <a th:href="@{/admin/tags(page=${page.number}+1)}"  class="item" th:unless="${page.last}">下一页</a>
                         </div>
-                        <a href="#" th:href="@{/admin/types/input}" class=" ui teal right floated button">新增</a>
+                        <a href="#" th:href="@{/admin/tags/input}" class=" ui teal right floated button">新增</a>
                     </th>
                 </tr>
 
