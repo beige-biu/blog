@@ -84,6 +84,9 @@ public class TypeController {
         if (result.hasErrors()) {
             return "admin/type-input";
         }
+        if(type.getName().equals(typeService.selectByPrimaryKey(id))){
+            result.rejectValue("name","nameError","请修改分类名");
+        }
         Type t = typeService.updateType(id,type);
         if (t == null ) {
             attributes.addFlashAttribute("message", "更新失败");

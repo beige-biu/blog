@@ -38,6 +38,7 @@ public class BlogServiceImpl implements BLogService {
     @Override
     public Page<Blog> listBlog(Pageable pageable, Blog blog) {
 
+
         return blogRepository.findAll(new Specification<Blog>() {
             @Override
             //root:具体对象  查询哪个表
@@ -51,7 +52,7 @@ public class BlogServiceImpl implements BLogService {
                 if (blog.getTypeId() != null) {
                     predicates.add(cb.equal(root.<Type>get("type").get("id"), blog.getTypeId()));
                 }
-                if (blog.isRecommend()) {
+                if (blog.isRecommend()==true) {
                     predicates.add(cb.equal(root.<Boolean>get("recommend"), blog.isRecommend()));
                 }
                 cq.where(predicates.toArray(new Predicate[predicates.size()]));

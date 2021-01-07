@@ -70,11 +70,15 @@ public class TagController {
     public String editPost(@Valid Tag tag, BindingResult result, @PathVariable Long id, RedirectAttributes attributes) {
         Tag tag1 = tagService.selectByName(tag.getName());
         if (tag1 != null) {
-            result.rejectValue("name","nameError","不能添加重复的分类");
+            result.rejectValue("name","nameError","不能添加重复的标签");
         }
         if (result.hasErrors()) {
             return "admin/type-input";
         }
+        if(tag.getName().equals(tagService.selectByPrimaryKey(id))){
+            result.rejectValue("name","nameError","不能添加重复的标签");
+        }
+
         Tag t = tagService.updateTag(id,tag);
         if (t == null ) {
             attributes.addFlashAttribute("message", "更新失败");

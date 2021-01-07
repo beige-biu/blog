@@ -13,6 +13,7 @@ import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
 import javax.transaction.Transactional;
+import java.util.List;
 import java.util.Optional;
 
 /**
@@ -74,5 +75,10 @@ public class TypeServiceImpl implements TypeService {
     @Override
     public Type selectByPrimaryKey(Long id) {
         return typeMapper.selectByPrimaryKey(id);
+    }
+
+    @Override
+    public List<Type> listType() {
+        return typeRepository.findAll();
     }
 }

@@ -26,7 +26,7 @@ public class Blog {
 
     private Boolean published;
 
-    private Boolean recommend;
+    private boolean recommend;
 
     private Boolean shareStatement;
 
@@ -110,7 +110,7 @@ public class Blog {
         return recommend;
     }
 
-    public void setRecommend(Boolean recommend) {
+    public void setRecommend(boolean recommend) {
         this.recommend = recommend;
     }
 
