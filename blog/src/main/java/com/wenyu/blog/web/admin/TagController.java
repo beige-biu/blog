@@ -75,9 +75,7 @@ public class TagController {
         if (result.hasErrors()) {
             return "admin/type-input";
         }
-        if(tag.getName().equals(tagService.selectByPrimaryKey(id))){
-            result.rejectValue("name","nameError","不能添加重复的标签");
-        }
+
 
         Tag t = tagService.updateTag(id,tag);
         if (t == null ) {

@@ -14,7 +14,6 @@ import org.springframework.stereotype.Service;
 import javax.annotation.Resource;
 import javax.transaction.Transactional;
 import java.util.List;
-import java.util.Optional;
 
 /**
  * Author:wenyu
@@ -39,7 +38,7 @@ public class TypeServiceImpl implements TypeService {
 
     @Transactional
     @Override
-    public Optional<Type> getType(Long id) {
+    public Type getType(Long id) {
         return typeRepository.findById(id);
     }
 

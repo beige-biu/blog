@@ -5,7 +5,6 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 
 import java.util.List;
-import java.util.Optional;
 
 /**
  * Author:wenyu
@@ -15,7 +14,7 @@ public interface TypeService {
 
     Type saveType(Type type);
 
-    Optional<Type> getType(Long id);
+    Type getType(Long id);
 
     Page<Type> listType(Pageable pageable);
 

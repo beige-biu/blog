@@ -54,6 +54,14 @@
 
 <div class="m-container-small m-padded-tb-big">
     <div class="ui container">
+        <div class="ui  mini success message" th:unless="${#strings.isEmpty(message)}"  >
+            <i class="close icon"></i>
+            <div class="header">提示：</div>
+            <p th:text="${message}">恭喜，操作成功</p>
+
+
+        </div>
+
         <div  class="ui segment form">
             <input type="hidden" name="page" >
             <div class="inline fields">
@@ -125,6 +133,9 @@
 
                 </tfoot>
             </table>
+
+
+
         </div>
 
         </div>
@@ -210,6 +221,15 @@
             page : $("[name='page']").val()
         });
     }
+
+    $('.message .close')
+        .on('click',function () {
+            $(this)
+                .closest('.message')
+                .transition('fade');
+
+        })
+
 
 </script>
 </body>

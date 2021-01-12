@@ -16,7 +16,7 @@ public interface BLogService {
 
     Page<Blog> listBlog(Pageable pageable,Blog blog);
 
-    Blog svaeBlog(Blog blog);
+    Blog saveBlog(Blog blog);
 
     Blog updateBlog(Long id,Blog blog);
 
