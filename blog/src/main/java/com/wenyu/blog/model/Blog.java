@@ -1,13 +1,18 @@
 package com.wenyu.blog.model;
 
+import org.springframework.boot.autoconfigure.domain.EntityScan;
+
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import java.util.Optional;
+
 
 @Entity
 @Table(name = "t_blog")
 public class Blog {
+
     @Id
     @GeneratedValue
     private Long id;
@@ -36,16 +41,25 @@ public class Blog {
 
     private Integer views;
 
-    private Long typeId;
 
-    private Long userId;
+
 
     private String content;
 
+    @ManyToOne
     private User user;
+
+    @ManyToOne
     private Type type;
 
+
+
+    @ManyToMany(cascade = {CascadeType.PERSIST})
+    @ElementCollection(targetClass = Tag.class)
     private List<Tag> tags = new ArrayList<>();
+
+    @OneToMany(mappedBy = "blog")
+    @ElementCollection(targetClass = Comment.class)
     private List<Comment> comments = new ArrayList<>();
 
     @Transient   //不会入库
@@ -195,21 +209,8 @@ public class Blog {
         this.views = views;
     }
 
-    public Long getTypeId() {
-        return typeId;
-    }
 
-    public void setTypeId(Long typeId) {
-        this.typeId = typeId;
-    }
 
-    public Long getUserId() {
-        return userId;
-    }
-
-    public void setUserId(Long userId) {
-        this.userId = userId;
-    }
 
     public String getContent() {
         return content;
@@ -223,25 +224,6 @@ public class Blog {
         return recommend;
     }
 
-    @Override
-    public String toString() {
-        return "Blog{" +
-                "id=" + id +
-                ", appreciation=" + appreciation +
-                ", commentabled=" + commentabled +
-                ", createTime=" + createTime +
-                ", description='" + description + '\'' +
-                ", firstPicture='" + firstPicture + '\'' +
-                ", flag='" + flag + '\'' +
-                ", published=" + published +
-                ", recommend=" + recommend +
-                ", shareStatement=" + shareStatement +
-                ", title='" + title + '\'' +
-                ", updateTime=" + updateTime +
-                ", views=" + views +
-                ", typeId=" + typeId +
-                ", userId=" + userId +
-                ", content='" + content + '\'' +
-                '}';
-    }
+
+
 }

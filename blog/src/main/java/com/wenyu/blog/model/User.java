@@ -1,8 +1,15 @@
 package com.wenyu.blog.model;
 
+import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
+@Entity
+@Table(name = "t_user")
 public class User {
+    @Id
+    @GeneratedValue
     private Long id;
 
     private String avatar;
@@ -20,6 +27,16 @@ public class User {
     private Date updateTime;
 
     private String username;
+    @OneToMany(mappedBy = "user")
+    private List<Blog> blogs = new ArrayList<>();
+
+    public List<Blog> getBlogs() {
+        return blogs;
+    }
+
+    public void setBlogs(List<Blog> blogs) {
+        this.blogs = blogs;
+    }
 
     public Long getId() {
         return id;

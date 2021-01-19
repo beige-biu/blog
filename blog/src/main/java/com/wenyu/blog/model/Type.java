@@ -1,10 +1,9 @@
 package com.wenyu.blog.model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Table(name = "t_type")
@@ -16,6 +15,16 @@ public class Type {
 
     @NotBlank(message = "分类名称不能为空") //后端校验
     private String name;
+    @OneToMany(mappedBy = "type")
+    private List<Blog> blogs = new ArrayList<>();
+
+    public List<Blog> getBlogs() {
+        return blogs;
+    }
+
+    public void setBlogs(List<Blog> blogs) {
+        this.blogs = blogs;
+    }
 
     public Long getId() {
         return id;

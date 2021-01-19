@@ -39,7 +39,7 @@ public class TypeServiceImpl implements TypeService {
     @Transactional
     @Override
     public Type getType(Long id) {
-        return typeRepository.findById(id);
+        return typeMapper.selectByPrimaryKey(id);
     }
 
     @Transactional

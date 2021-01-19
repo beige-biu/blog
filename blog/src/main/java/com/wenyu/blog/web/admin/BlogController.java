@@ -39,7 +39,11 @@ public class BlogController {
     @Resource
     private TagService tagService;
 
-    @GetMapping("/blogs")
+    @RequestMapping("/blogs")
+    public String blogs(){
+        return LIST;
+    }
+    /*@GetMapping("/blogs")
     public String blogs(@PageableDefault(size = 2,sort = {"updateTime"},direction = Sort.Direction.DESC) Pageable pageable, Blog blog, Model model){
         model.addAttribute("types", typeService.listType());
         model.addAttribute("page", bLogService.listBlog(pageable, blog));
@@ -64,7 +68,7 @@ public class BlogController {
     @PostMapping("/blogs")
     public String post(Blog blog, RedirectAttributes attributes, HttpSession session) {
         blog.setUser((User) session.getAttribute("user"));
-        blog.setType(typeService.getType(blog.getTypeId()));
+        blog.setType(typeService.getType(blog.getType().getId()));
         blog.setTags(tagService.listTag(blog.getTagIds()));
         Blog b;
         if (blog.getId() == null) {
@@ -78,6 +82,6 @@ public class BlogController {
             attributes.addFlashAttribute("message", "操作成功");
         }
         return REDIRECT_LIST;
-    }
+    }*/
 
 }

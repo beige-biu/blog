@@ -2,6 +2,7 @@ package com.wenyu.blog.service.impl;
 
 import com.wenyu.blog.NotFoundException;
 import com.wenyu.blog.dao.BlogRepository;
+import com.wenyu.blog.mapper.BlogMapper;
 import com.wenyu.blog.model.Blog;
 import com.wenyu.blog.model.Type;
 import com.wenyu.blog.service.BLogService;
@@ -31,6 +32,8 @@ public class BlogServiceImpl implements BLogService {
 
     @Resource
     private BlogRepository blogRepository;
+    @Resource
+    private BlogMapper blogMapper;
 
     @Override
     public Optional<Blog> getBlog(Long id) {
@@ -51,8 +54,8 @@ public class BlogServiceImpl implements BLogService {
                 if (!"".equals(blog.getTitle()) && blog.getTitle() != null) {
                     predicates.add(cb.like(root.<String>get("title"), "%"+blog.getTitle()+"%"));
                 }
-                if (blog.getTypeId() != null) {
-                    predicates.add(cb.equal(root.<Type>get("type").get("id"), blog.getTypeId()));
+                if (blog.getType().getId() != null) {
+                    predicates.add(cb.equal(root.<Type>get("type").get("id"), blog.getType().getId()));
                 }
                 if (blog.isRecommend()==true) {
                     predicates.add(cb.equal(root.<Boolean>get("recommend"), blog.isRecommend()));
