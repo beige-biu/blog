@@ -3,6 +3,7 @@ package com.wenyu.blog.model;
 import org.springframework.boot.autoconfigure.domain.EntityScan;
 
 import javax.persistence.*;
+import javax.persistence.criteria.Expression;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -41,9 +42,8 @@ public class Blog {
 
     private Integer views;
 
-
-
-
+    @Basic(fetch = FetchType.LAZY)
+    @Lob
     private String content;
 
     @ManyToOne
