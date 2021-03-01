@@ -52,7 +52,16 @@ public class Blog {
     @ManyToOne
     private Type type;
 
+    @ManyToOne
+    private Tag tag;
 
+    public Tag getTag() {
+        return tag;
+    }
+
+    public void setTag(Tag tag) {
+        this.tag = tag;
+    }
 
     @ManyToMany(cascade = {CascadeType.PERSIST})
     @ElementCollection(targetClass = Tag.class)
@@ -62,16 +71,16 @@ public class Blog {
     @ElementCollection(targetClass = Comment.class)
     private List<Comment> comments = new ArrayList<>();
 
-    @Transient   //不会入库
-    private String tagIds;
+//    @Transient   //不会入库
+//    private String tagIds;
 
-    public String getTagIds() {
-        return tagIds;
-    }
-
-    public void setTagIds(String tagIds) {
-        this.tagIds = tagIds;
-    }
+//    public String getTagIds() {
+//        return tagIds;
+//    }
+//
+//    public void setTagIds(String tagIds) {
+//        this.tagIds = tagIds;
+//    }
 
     public List<Tag> getTags() {
         return tags;

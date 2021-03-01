@@ -9,14 +9,12 @@ import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
-import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
 import javax.transaction.Transactional;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
 
 /**
  * Author:wenyu
@@ -39,8 +37,14 @@ public class TagServiceImpl implements TagService {
 
     @Transactional
     @Override
-    public Optional<Tag> getTag(Long id) {
-        return tagRepository.findById(id);
+    public List<Tag> getTag(Long id) {
+       // return tagRepository.findById(id);
+        return (List<Tag>) tagMapper.selectByPrimaryKey(id);
+    }
+
+    @Override
+    public Tag getOneTag(Long id) {
+        return tagMapper.selectByPrimaryKey(id);
     }
 
     @Override

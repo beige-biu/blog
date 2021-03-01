@@ -1,6 +1,8 @@
 package com.wenyu.blog.web.admin;
 
+import com.wenyu.blog.dao.BlogRepository;
 import com.wenyu.blog.model.Blog;
+import com.wenyu.blog.model.Tag;
 import com.wenyu.blog.model.User;
 import com.wenyu.blog.service.BLogService;
 import com.wenyu.blog.service.TagService;
@@ -32,7 +34,8 @@ public class BlogController {
     private static final String REDIRECT_LIST = "redirect:/admin/blogs";
 
     @Resource
-    private BLogService bLogService;
+    private BLogService blogService;
+
 
     @Autowired
     private TypeService typeService;
@@ -40,17 +43,18 @@ public class BlogController {
     private TagService tagService;
 
 
-    @GetMapping("/blogs")
-    public String blogs(@PageableDefault(size = 2,sort = {"updateTime"},direction = Sort.Direction.DESC) Pageable pageable, Blog blog, Model model){
+    @RequestMapping("/blogs")
+    public String blogs(@PageableDefault(size = 3,sort = {"updateTime"},direction = Sort.Direction.DESC) Pageable pageable, Blog blog, Model model){
         model.addAttribute("types", typeService.listType());
-        model.addAttribute("page", bLogService.listBlog(pageable, blog));
-        return "admin/blogs";
+        model.addAttribute("page", blogService.listBlog(pageable, blog));
+
+        return LIST;
     }
 
     //局部刷新片段
     @PostMapping("/blogs/search")
     public String searcg(@PageableDefault(size = 2,sort = {"updateTime"},direction = Sort.Direction.DESC) Pageable pageable, Blog blog, Model model){
-        model.addAttribute("page", bLogService.listBlog(pageable, blog));
+        model.addAttribute("page", blogService.listBlog(pageable, blog));
         return "admin/blogs :: blogList";
     }
 
@@ -66,12 +70,13 @@ public class BlogController {
     public String post(Blog blog, RedirectAttributes attributes, HttpSession session) {
         blog.setUser((User) session.getAttribute("user"));
         blog.setType(typeService.getType(blog.getType().getId()));
-        blog.setTags(tagService.listTag(blog.getTagIds()));
+        //blog.setTags(tagService.getTag(blog.getTag().getId()));
+        //blog.setTag(tagService.getOneTag(blog.getTag().getId()));
         Blog b;
         if (blog.getId() == null) {
-            b =  bLogService.saveBlog(blog);
+            b =  blogService.saveBlog(blog);
         } else {
-            b = bLogService.updateBlog(blog.getId(), blog);
+            b = blogService.updateBlog(blog.getId(), blog);
         }
         if (b == null ) {
             attributes.addFlashAttribute("message", "操作失败");

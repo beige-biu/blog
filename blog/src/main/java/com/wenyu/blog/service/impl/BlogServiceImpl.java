@@ -32,8 +32,7 @@ public class BlogServiceImpl implements BLogService {
 
     @Resource
     private BlogRepository blogRepository;
-    @Resource
-    private BlogMapper blogMapper;
+
 
     @Override
     public Optional<Blog> getBlog(Long id) {
@@ -67,13 +66,20 @@ public class BlogServiceImpl implements BLogService {
         }, pageable);
     }
 
-    @Override
+
     @Transactional
+    @Override
     public Blog saveBlog(Blog blog) {
-        blog.setCreateTime(new Date());
-        blog.setUpdateTime(new Date());
-        blog.setViews(0);//浏览次数
+        if (blog.getId() == null) {
+            blog.setCreateTime(new Date());
+            blog.setUpdateTime(new Date());
+            blog.setViews(0);
+        } else {
+            blog.setUpdateTime(new Date());
+        }
         return blogRepository.save(blog);
+
+
     }
 
     @Override
