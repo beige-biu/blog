@@ -32,7 +32,8 @@ public class BlogServiceImpl implements BLogService {
 
     @Resource
     private BlogRepository blogRepository;
-
+    @Resource
+    private BlogMapper blogMapper;
 
     @Override
     public Optional<Blog> getBlog(Long id) {
@@ -94,7 +95,7 @@ public class BlogServiceImpl implements BLogService {
 
     @Override
     public void deleteBlog(Long id) {
-        blogRepository.deleteById(id);
-
+//        blogRepository.deleteById(id);
+blogMapper.deleteByPrimaryKey(id);
     }
 }

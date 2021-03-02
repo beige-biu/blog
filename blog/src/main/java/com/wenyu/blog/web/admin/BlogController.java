@@ -14,12 +14,14 @@ import org.springframework.data.web.PageableDefault;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpSession;
+import java.util.Optional;
 
 /**
  * Author:wenyu
@@ -53,7 +55,7 @@ public class BlogController {
 
     //局部刷新片段
     @PostMapping("/blogs/search")
-    public String searcg(@PageableDefault(size = 2,sort = {"updateTime"},direction = Sort.Direction.DESC) Pageable pageable, Blog blog, Model model){
+    public String searcg(@PageableDefault(size = 3,sort = {"updateTime"},direction = Sort.Direction.DESC) Pageable pageable, Blog blog, Model model){
         model.addAttribute("page", blogService.listBlog(pageable, blog));
         return "admin/blogs :: blogList";
     }
@@ -61,10 +63,31 @@ public class BlogController {
     @RequestMapping("/blogs/input")
     public String input(Model model){
         model.addAttribute("blog", new Blog());
-        model.addAttribute("tags", tagService.listTag());
-        model.addAttribute("types", typeService.listType());
+        setTypeAndTag(model);
         return INPUT;
     }
+
+    private void setTypeAndTag(Model model){
+        model.addAttribute("tags", tagService.listTag());
+        model.addAttribute("types", typeService.listType());
+    }
+
+    @RequestMapping("/blogs/{id}/input")
+    public String editInput(@PathVariable Long id, Model model){
+        setTypeAndTag(model);
+        Optional<Blog> blog = blogService.getBlog(id);
+        model.addAttribute("blog", blog);
+
+        return "admin/blogs-edit";
+    }
+
+    @RequestMapping("/blogs/{id}/delete")
+    public String delete(@PathVariable Long id){
+       blogService.deleteBlog(id);
+
+        return "redirect:/admin/blogs";
+    }
+
 
     @PostMapping("/blogs")
     public String post(Blog blog, RedirectAttributes attributes, HttpSession session) {
